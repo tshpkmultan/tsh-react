@@ -11,7 +11,7 @@ import {
   DollarSign,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-const BASE_URL = "https://800junkuae.online/tsh-apiAPI";
+const BASE_URL = "https://800junkuae.online/tsh-api/API";
 
 export default function IslamicSection({ lang }) {
 
