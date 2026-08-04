@@ -57,3 +57,19 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #eab308;
 }
+/* Hide Google Translate banner */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+iframe.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+html {
+  margin-top: 0 !important;
+}

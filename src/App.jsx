@@ -9,6 +9,7 @@ import {
 /* =========================================
    MAIN COMPONENTS
 ========================================= */
+import GoogleTranslate from "./components/GoogleTranslate";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
@@ -93,7 +94,7 @@ function App() {
      LANGUAGE
   ========================================= */
 
-  const [lang, setLang] = useState("ur");
+  const [lang, setLang] = useState("en");
 
   useEffect(() => {
 
@@ -142,9 +143,12 @@ const hideLayout =
      RETURN
   ========================================= */
 
-  return (
+ return (
 
-    <>
+  <>
+
+      {/* Google Translate - Available on all pages */}
+      <GoogleTranslate />
 
       {/* =========================================
          HEADER
@@ -174,7 +178,7 @@ const hideLayout =
           element={
 
             <>
-
+<GoogleTranslate />
               <HeroSlider lang={lang} />
 
               <Stats lang={lang} />
