@@ -158,7 +158,7 @@ export default function IslamicSection({ lang }) {
                         : "https://placehold.co/600x400?text=Islamic+Course"
                     }
                     alt={course.course_name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    className="w-full h-full object-contain  group-hover:scale-110 transition duration-500"
                   />
 
                   <div className="absolute top-4 left-4 w-14 h-14 rounded-full bg-yellow-400 text-[#0b2d36] flex items-center justify-center shadow-lg">
