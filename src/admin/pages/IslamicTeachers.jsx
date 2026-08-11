@@ -439,129 +439,234 @@ const handleChange = (e) => {
 
       {/* TABLE */}
 
-      <div className="bg-white rounded-[35px] shadow-xl overflow-hidden">
+     {/* =====================================
+    RESPONSIVE TABLE
+===================================== */}
 
-        <table className="w-full">
+<div className="bg-white rounded-[25px] md:rounded-[35px] shadow-xl overflow-hidden">
 
-          <thead>
+  <div className="w-full overflow-x-auto">
 
-            <tr className="bg-[#032B38] text-white">
+    <table className="w-full min-w-[600px]">
 
-              <th className="p-5 text-left">Name</th>
-              <th className="p-5 text-left">Photo</th>
-              <th className="p-5 text-left">Qualification</th>
-              <th className="p-5 text-left">Specialization</th>
-              <th className="p-5 text-left">Experience</th>
-              <th className="p-5 text-left">Status</th>
-              <th className="p-5 text-center">Actions</th>
+      <thead>
+        <tr className="bg-[#032B38] text-white">
 
-            </tr>
+          {/* NAME - ALWAYS SHOW */}
+          <th className="p-3 md:p-5 text-left">
+            Name
+          </th>
 
-          </thead>
+          {/* PHOTO - ALWAYS SHOW */}
+          <th className="p-3 md:p-5 text-left">
+            Photo
+          </th>
 
-          <tbody>
+          {/* QUALIFICATION - HIDE ON MOBILE */}
+          <th className="hidden md:table-cell p-5 text-left">
+            Qualification
+          </th>
 
-            {teachers.map((teacher) => (
+          {/* SPECIALIZATION - HIDE ON MOBILE */}
+          <th className="hidden lg:table-cell p-5 text-left">
+            Specialization
+          </th>
 
-              <tr
-                key={teacher.id}
-                className="border-b hover:bg-slate-50"
+          {/* EXPERIENCE - HIDE ON MOBILE */}
+          <th className="hidden lg:table-cell p-5 text-left">
+            Experience
+          </th>
+
+          {/* STATUS - SHOW TABLET/DESKTOP */}
+          <th className="hidden sm:table-cell p-3 md:p-5 text-left">
+            Status
+          </th>
+
+          {/* ACTIONS - ALWAYS SHOW */}
+          <th className="p-3 md:p-5 text-center">
+            Actions
+          </th>
+
+        </tr>
+      </thead>
+
+
+      <tbody>
+
+        {teachers.map((teacher) => (
+
+          <tr
+            key={teacher.id}
+            className="border-b hover:bg-slate-50 transition"
+          >
+
+            {/* =========================
+                NAME
+            ========================== */}
+
+            <td className="p-3 md:p-5">
+
+              <div className="min-w-[120px]">
+
+                <h3 className="font-black text-sm md:text-lg text-[#032B38]">
+                  {teacher.name}
+                </h3>
+
+                {/* Email only desktop */}
+                <p className="hidden md:block text-slate-500 text-sm mt-1">
+                  {teacher.email}
+                </p>
+
+              </div>
+
+            </td>
+
+
+            {/* =========================
+                PHOTO
+            ========================== */}
+
+            <td className="p-3 md:p-5">
+
+              <img
+                src={
+                  teacher.profile_image
+                    ? `https://800junkuae.online/tsh-api/uploads/${teacher.profile_image}`
+                    : "https://via.placeholder.com/60"
+                }
+                alt={teacher.name}
+                className="
+                  w-10 h-10
+                  md:w-14 md:h-14
+                  rounded-full
+                  object-cover
+                  border-2
+                  border-slate-200
+                "
+              />
+
+            </td>
+
+
+            {/* =========================
+                QUALIFICATION
+                HIDDEN ON MOBILE
+            ========================== */}
+
+            <td className="hidden md:table-cell p-5">
+
+              <span className="text-slate-700">
+                {teacher.qualification || "-"}
+              </span>
+
+            </td>
+
+
+            {/* =========================
+                SPECIALIZATION
+                HIDDEN ON MOBILE/TABLET
+            ========================== */}
+
+            <td className="hidden lg:table-cell p-5">
+
+              <span className="text-slate-700">
+                {teacher.specialization || "-"}
+              </span>
+
+            </td>
+
+
+            {/* =========================
+                EXPERIENCE
+                HIDDEN ON MOBILE/TABLET
+            ========================== */}
+
+            <td className="hidden lg:table-cell p-5">
+
+              <span className="font-semibold text-slate-700">
+                {teacher.experience_years || "0"} Years
+              </span>
+
+            </td>
+
+
+            {/* =========================
+                STATUS
+                HIDDEN ON SMALL MOBILE
+            ========================== */}
+
+            <td className="hidden sm:table-cell p-3 md:p-5">
+
+              <span
+                className={
+                  teacher.status === "active"
+                    ? "bg-green-100 text-green-700 px-3 md:px-4 py-2 rounded-xl text-xs md:text-sm font-semibold"
+                    : "bg-red-100 text-red-700 px-3 md:px-4 py-2 rounded-xl text-xs md:text-sm font-semibold"
+                }
               >
+                {teacher.status}
+              </span>
 
-                <td className="p-5">
-                  <div>
-                    <h3 className="font-black text-lg">
-                      {teacher.name}
-                    </h3>
-<td className="p-5">
-  <img
-    src={
-      teacher.profile_image
-        ? `https://800junkuae.online/tsh-api/uploads/${teacher.profile_image}`
-        : "https://via.placeholder.com/60"
-    }
-    alt={teacher.name}
-    className="w-14 h-14 rounded-full object-cover border"
-  />
-</td>
-                    <p className="text-slate-500">
-                      {teacher.email}
-                    </p>
-                  </div>
-                </td>
+            </td>
 
-                <td className="p-5">
-                  {teacher.qualification}
-                </td>
 
-                <td className="p-5">
-                  {teacher.specialization}
-                </td>
+            {/* =========================
+                ACTIONS
+            ========================== */}
 
-                <td className="p-5">
-                  {teacher.experience_years}
-                </td>
+            <td className="p-3 md:p-5">
 
-                <td className="p-5">
+              <div className="flex flex-col sm:flex-row gap-2 justify-center">
 
-                  <span
-                    className={
-                      teacher.status === "active"
-                        ? "bg-green-100 text-green-700 px-4 py-2 rounded-xl"
-                        : "bg-red-100 text-red-700 px-4 py-2 rounded-xl"
-                    }
-                  >
-                    {teacher.status}
-                  </span>
+                <button
+                  onClick={() => editTeacher(teacher)}
+                  className="
+                    bg-yellow-400
+                    hover:bg-yellow-500
+                    px-3 md:px-5
+                    py-2
+                    rounded-lg md:rounded-xl
+                    font-bold
+                    text-xs md:text-sm
+                    whitespace-nowrap
+                  "
+                >
+                  Edit
+                </button>
 
-                </td>
 
-                <td className="p-5 text-center">
+                <button
+                  onClick={() => deleteTeacher(teacher.id)}
+                  className="
+                    bg-red-500
+                    hover:bg-red-600
+                    text-white
+                    px-3 md:px-5
+                    py-2
+                    rounded-lg md:rounded-xl
+                    font-bold
+                    text-xs md:text-sm
+                    whitespace-nowrap
+                  "
+                >
+                  Delete
+                </button>
 
-                  <button
-                    onClick={() => editTeacher(teacher)}
-                    className="
-                      bg-yellow-400
-                      hover:bg-yellow-500
-                      px-5
-                      py-2
-                      rounded-xl
-                      font-bold
-                      mr-2
-                    "
-                  >
-                    Edit
-                  </button>
+              </div>
 
-                  <button
-                    onClick={() =>
-                      deleteTeacher(teacher.id)
-                    }
-                    className="
-                      bg-red-500
-                      hover:bg-red-600
-                      text-white
-                      px-5
-                      py-2
-                      rounded-xl
-                      font-bold
-                    "
-                  >
-                    Delete
-                  </button>
+            </td>
 
-                </td>
+          </tr>
 
-              </tr>
+        ))}
 
-            ))}
+      </tbody>
 
-          </tbody>
+    </table>
 
-        </table>
+  </div>
 
-      </div>
-
+</div>
     </div>
   );
 }
