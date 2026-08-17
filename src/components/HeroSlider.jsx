@@ -9,7 +9,6 @@ import slide4 from "../assets/slider4.png";
 import slide5 from "../assets/slider5.png";
 
 export default function HeroSlider({ lang }) {
-
   const [current, setCurrent] = useState(0);
   const navigate = useNavigate();
 
@@ -18,24 +17,18 @@ export default function HeroSlider({ lang }) {
   // =========================================
 
   useEffect(() => {
-
     const interval = setInterval(() => {
-
       setCurrent((prev) => (prev + 1) % 5);
-
     }, 3000);
 
     return () => clearInterval(interval);
-
   }, []);
-
 
   // =========================================
   // SLIDES
   // =========================================
 
   const slides = [
-
     // =========================================
     // SLIDE 1 - ISLAMIC
     // =========================================
@@ -47,53 +40,36 @@ export default function HeroSlider({ lang }) {
         title: "اسلامی تعلیم سب کے لیے",
 
         desc:
-          "قرآن، اسلامیات اور دینی تعلیم حاصل کریں اور اپنی روحانی زندگی کو بہتر بنائیں۔",
+          "قرآن پاک، اسلامیات اور دینی تعلیم حاصل کریں۔ اپنے علم میں اضافہ کریں اور ایک بہتر اسلامی زندگی کی طرف قدم بڑھائیں۔",
 
-        
-
-        btn2: "داخلہ لیں",
+        button: "ابھی داخلہ لیں",
       },
 
       en: {
         title: "Islamic Education for Everyone",
 
         desc:
-          "Learn Quran, Islamic studies and build your spiritual knowledge.",
+          "Learn Quran, Islamic studies and essential Islamic knowledge. Improve your understanding and take a step towards a better spiritual life.",
 
-       
-
-        btn2: "Join Now",
+        button: "Enroll Now",
       },
 
       ar: {
         title: "التعليم الإسلامي للجميع",
 
         desc:
-          "تعلم القرآن والدراسات الإسلامية وطوّر معرفتك الدينية.",
+          "تعلم القرآن والدراسات الإسلامية والمعرفة الدينية. طوّر فهمك وابدأ رحلة تعليمية وروحية أفضل.",
 
-        btn1: "اقرأ المزيد",
-
-        btn2: "انضم الآن",
+        button: "سجل الآن",
       },
 
       image: slide1,
 
-      // =====================================
-      // ISLAMIC LINKS
-      // =====================================
-
-      btn1Link: "/islamic",
-
-      btn2Link: "/login",
-
-      showBtn1: true,
-
-      showBtn2: true,
+      buttonLink: "/login",
     },
 
-
     // =========================================
-    // SLIDE 2 - DIGITAL
+    // SLIDE 2 - DIGITAL EDUCATION
     // =========================================
 
     {
@@ -103,53 +79,36 @@ export default function HeroSlider({ lang }) {
         title: "بہتر مستقبل کی طرف",
 
         desc:
-          "جدید ڈیجیٹل ہنر سیکھیں اور اپنے مستقبل کے لیے خود کو تیار کریں۔",
+          "جدید ڈیجیٹل ہنر سیکھیں، اپنی صلاحیتوں کو بہتر بنائیں اور مستقبل میں آن لائن مواقع حاصل کرنے کے لیے خود کو تیار کریں۔",
 
-        
-
-        btn2: "کورس میں شامل ہوں",
+        button: "ابھی داخلہ لیں",
       },
 
       en: {
         title: "Towards a Better Future",
 
         desc:
-          "Learn modern digital skills and prepare yourself for the future.",
+          "Learn modern digital skills, improve your abilities and prepare yourself for better educational and online career opportunities.",
 
-       
-
-        btn2: "Join Course",
+        button: "Enroll Now",
       },
 
       ar: {
         title: "نحو مستقبل أفضل",
 
         desc:
-          "تعلم المهارات الرقمية الحديثة واستعد لمستقبل أفضل.",
+          "تعلم المهارات الرقمية الحديثة وطوّر قدراتك واستعد للحصول على فرص تعليمية ومهنية أفضل عبر الإنترنت.",
 
-     
-
-        btn2: "انضم للدورة",
+        button: "سجل الآن",
       },
 
       image: slide2,
 
-      // =====================================
-      // DIGITAL LINKS
-      // =====================================
-
-      btn1Link: "/digital",
-
-      btn2Link: "/login",
-
-      showBtn1: true,
-
-      showBtn2: true,
+      buttonLink: "/login",
     },
 
-
     // =========================================
-    // SLIDE 3 - EDUCATION / DIGITAL
+    // SLIDE 3 - EDUCATION
     // =========================================
 
     {
@@ -159,50 +118,33 @@ export default function HeroSlider({ lang }) {
         title: "تعلیم سب کے لیے",
 
         desc:
-          "ہر بچے اور نوجوان کو معیاری تعلیم کے مواقع فراہم کرنا ہمارا مقصد ہے۔",
+          "ہم بچوں اور نوجوانوں کو معیاری تعلیم اور جدید مہارتوں کے مواقع فراہم کرتے ہیں تاکہ وہ اپنے مستقبل کو بہتر بنا سکیں۔",
 
-      
-
-        btn2: "شروع کریں",
+        button: "ابھی داخلہ لیں",
       },
 
       en: {
         title: "Education for All",
 
         desc:
-          "Every child and young person deserves access to quality education.",
+          "We provide quality education and modern learning opportunities for children and young people to help them build a better future.",
 
-        btn1: "Learn More",
-
-        btn2: "Start Learning",
+        button: "Enroll Now",
       },
 
       ar: {
         title: "التعليم للجميع",
 
         desc:
-          "كل طفل وشاب يستحق الحصول على تعليم جيد.",
+          "نحن نوفر التعليم الجيد وفرص التعلم الحديثة للأطفال والشباب لمساعدتهم على بناء مستقبل أفضل.",
 
-
-        btn2: "ابدأ التعلم",
+        button: "سجل الآن",
       },
 
       image: slide3,
 
-      // =====================================
-      // SLIDE 3 LINKS
-      // =====================================
-
-      // Learn More button removed
-      btn1Link: null,
-
-      btn2Link: "/login",
-
-      showBtn1: false,
-
-      showBtn2: true,
+      buttonLink: "/login",
     },
-
 
     // =========================================
     // SLIDE 4 - HEALTH
@@ -215,50 +157,33 @@ export default function HeroSlider({ lang }) {
         title: "صحت مند معاشرہ",
 
         desc:
-          "صحت ہماری ترجیح ہے، بہتر صحت کے لیے ہمارے پروگرامز میں شامل ہوں۔",
+          "صحت ہماری اولین ترجیح ہے۔ بہتر صحت، طبی رہنمائی اور معیاری صحت کی خدمات کے لیے ہمارے پروگرام میں شامل ہوں۔",
 
-        btn1: "مزید جانیں",
-
-        btn2: "شروع کریں",
+        button: "اپائنٹمنٹ لیں",
       },
 
       en: {
         title: "Healthy Society",
 
         desc:
-          "Health is our priority. Join our health programs and services.",
+          "Health is our priority. Get access to quality healthcare services, medical guidance and support through our health program.",
 
-        btn1: "Learn More",
-
-        btn2: "Get Started",
+        button: "Appointment",
       },
 
       ar: {
         title: "مجتمع صحي",
 
         desc:
-          "الصحة هي أولويتنا. انضم إلى برامجنا وخدماتنا الصحية.",
+          "الصحة هي أولويتنا. احصل على خدمات صحية عالية الجودة وإرشادات طبية ودعم من خلال برنامجنا الصحي.",
 
-        btn1: "المزيد",
-
-        btn2: "ابدأ الآن",
+        button: "احجز موعدًا",
       },
 
       image: slide4,
 
-      // =====================================
-      // HEALTH LINKS
-      // =====================================
-
-      btn1Link: "/health",
-
-      btn2Link: "/login",
-
-      showBtn1: true,
-
-      showBtn2: true,
+      buttonLink: "/login",
     },
-
 
     // =========================================
     // SLIDE 5 - DIGITAL SKILLS
@@ -271,52 +196,34 @@ export default function HeroSlider({ lang }) {
         title: "ہنر سیکھیں اور آن لائن کمائیں",
 
         desc:
-          "eBay، Amazon، Walmart، Freelancing اور Graphic Designing کے ذریعے گھر بیٹھے کمائی شروع کریں۔",
+          "eBay، Amazon، Walmart، Freelancing اور Graphic Designing جیسے جدید ہنر سیکھیں اور گھر بیٹھے آن لائن کمائی کے مواقع حاصل کریں۔",
 
-        btn1: "مزید جانیں",
-
-        btn2: "کورس میں شامل ہوں",
+        button: "ابھی داخلہ لیں",
       },
 
       en: {
         title: "Learn Skills & Earn Online",
 
         desc:
-          "Start earning from home with eBay, Amazon, Walmart, Freelancing, and Graphic Designing.",
+          "Learn eBay, Amazon, Walmart, Freelancing and Graphic Designing skills and prepare yourself for online earning opportunities from home.",
 
-        btn1: "Learn More",
-
-        btn2: "Join Course",
+        button: "Enroll Now",
       },
 
       ar: {
         title: "تعلم المهارات واربح عبر الإنترنت",
 
         desc:
-          "ابدأ الربح من المنزل عبر eBay و Amazon و Walmart والعمل الحر والتصميم الجرافيكي.",
+          "تعلم مهارات eBay وAmazon وWalmart والعمل الحر والتصميم الجرافيكي واستعد للحصول على فرص للربح عبر الإنترنت من المنزل.",
 
-        btn1: "اقرأ المزيد",
-
-        btn2: "انضم الآن",
+        button: "سجل الآن",
       },
 
       image: slide5,
 
-      // =====================================
-      // DIGITAL SKILLS LINKS
-      // =====================================
-
-      btn1Link: "/digital",
-
-      btn2Link: "/login",
-
-      showBtn1: true,
-
-      showBtn2: true,
+      buttonLink: "/login",
     },
-
   ];
-
 
   // =========================================
   // CURRENT SLIDE
@@ -326,35 +233,23 @@ export default function HeroSlider({ lang }) {
 
   const content = slide[lang] || slide.en;
 
-
   // =========================================
-  // BUTTON NAVIGATION
+  // BUTTON CLICK
   // =========================================
 
-  const handleButtonClick = (link) => {
-
+  const handleEnroll = () => {
     // Save selected category
-    localStorage.setItem(
-      "category",
-      slide.category
-    );
+    localStorage.setItem("category", slide.category);
 
-    // Navigate
-    if (link) {
-
-      navigate(link);
-
-    }
-
+    // Go to login
+    navigate(slide.buttonLink);
   };
-
 
   // =========================================
   // RETURN
   // =========================================
 
   return (
-
     <div
       className="
         relative
@@ -365,7 +260,6 @@ export default function HeroSlider({ lang }) {
         overflow-hidden
       "
     >
-
       {/* =====================================
           BACKGROUND IMAGE
       ====================================== */}
@@ -386,19 +280,11 @@ export default function HeroSlider({ lang }) {
         }}
       ></div>
 
-
       {/* =====================================
           DARK OVERLAY
       ====================================== */}
 
-      <div
-        className="
-          absolute
-          inset-0
-          bg-black/40
-        "
-      ></div>
-
+      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* =====================================
           CONTENT
@@ -418,7 +304,6 @@ export default function HeroSlider({ lang }) {
           px-4
         "
       >
-
         {/* TITLE */}
 
         <h1
@@ -428,105 +313,53 @@ export default function HeroSlider({ lang }) {
             md:text-5xl
             lg:text-6xl
             font-bold
-            mb-4
+            mb-5
             text-[#f5d76e]
           "
         >
           {content.title}
         </h1>
 
-
         {/* DESCRIPTION */}
 
         <p
           className="
-            max-w-2xl
-            mb-6
+            max-w-3xl
+            mb-7
             text-base
             sm:text-lg
             md:text-xl
-            px-2
+            leading-relaxed
+            px-3
           "
         >
           {content.desc}
         </p>
 
-
         {/* =====================================
-            BUTTONS
+            ONLY ONE BUTTON
         ====================================== */}
 
-        <div
+        <button
+          type="button"
+          onClick={handleEnroll}
           className="
-            flex
-            flex-col
-            sm:flex-row
-            gap-4
+            bg-[#0f4f3f]
+            text-white
+            px-8
+            py-3
+            rounded-lg
+            font-semibold
+            shadow-lg
+            hover:bg-[#0b3a2e]
+            hover:scale-105
+            transition
+            duration-300
           "
         >
-
-          {/* =================================
-              BUTTON 1
-          ================================= */}
-
-          {slide.showBtn1 && slide.btn1Link && (
-
-            // <button
-            //   type="button"
-            //   onClick={() =>
-            //     handleButtonClick(
-            //       slide.btn1Link
-            //     )
-            //   }
-            //   className="
-            //     bg-white/20
-            //     px-6
-            //     py-2
-            //     rounded-lg
-            //     backdrop-blur
-            //     hover:bg-white/30
-            //     transition
-            //     duration-300
-            //   "
-            // >
-            //   {content.btn1}
-            // </button>
-
-          )}
-
-
-          {/* =================================
-              BUTTON 2
-          ================================= */}
-
-          {slide.showBtn2 && slide.btn2Link && (
-
-            <button
-              type="button"
-              onClick={() =>
-                handleButtonClick(
-                  slide.btn2Link
-                )
-              }
-              className="
-                bg-[#0f4f3f]
-                px-6
-                py-2
-                rounded-lg
-                hover:bg-[#0b3a2e]
-                transition
-                duration-300
-              "
-            >
-              {content.btn2}
-            </button>
-
-          )}
-
-        </div>
-
+          {content.button}
+        </button>
       </div>
-
 
       {/* =====================================
           SLIDER DOTS
@@ -536,16 +369,15 @@ export default function HeroSlider({ lang }) {
         className="
           absolute
           bottom-6
-          w-full
+          left-0
+          right-0
           flex
           justify-center
           gap-2
           z-20
         "
       >
-
         {slides.map((_, i) => (
-
           <button
             key={i}
             type="button"
@@ -558,7 +390,6 @@ export default function HeroSlider({ lang }) {
               cursor-pointer
               transition
               duration-300
-
               ${
                 current === i
                   ? "bg-[#d4af37] scale-110"
@@ -566,13 +397,8 @@ export default function HeroSlider({ lang }) {
               }
             `}
           ></button>
-
         ))}
-
       </div>
-
     </div>
-
   );
-
 }
