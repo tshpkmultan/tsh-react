@@ -178,7 +178,7 @@ courses.length===0 ?
                       : "https://placehold.co/600x400?text=Digital+Course"
                   }
                   alt={course.title}
-                  className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+                  className="w-full h-56 object-contain group-hover:scale-110 transition duration-500"
                 />
 
                 <span
