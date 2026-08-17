@@ -26,6 +26,7 @@ export default function HeroSlider({ lang }) {
 
   // =========================================
   // SLIDES
+  // 2 ISLAMIC + 2 DIGITAL + 1 HEALTH
   // =========================================
 
   const slides = [
@@ -40,7 +41,7 @@ export default function HeroSlider({ lang }) {
         title: "اسلامی تعلیم سب کے لیے",
 
         desc:
-          "قرآن پاک، اسلامیات اور دینی تعلیم حاصل کریں۔ اپنے علم میں اضافہ کریں اور ایک بہتر اسلامی زندگی کی طرف قدم بڑھائیں۔",
+          "قرآن پاک، حدیث، اسلامیات اور دینی تعلیم حاصل کریں اور اپنی روحانی زندگی کو بہتر بنانے کی طرف ایک خوبصورت قدم اٹھائیں۔",
 
         button: "ابھی داخلہ لیں",
       },
@@ -49,7 +50,7 @@ export default function HeroSlider({ lang }) {
         title: "Islamic Education for Everyone",
 
         desc:
-          "Learn Quran, Islamic studies and essential Islamic knowledge. Improve your understanding and take a step towards a better spiritual life.",
+          "Learn Quran, Hadith, Islamic studies and essential Islamic knowledge to improve your understanding and spiritual life.",
 
         button: "Enroll Now",
       },
@@ -58,7 +59,7 @@ export default function HeroSlider({ lang }) {
         title: "التعليم الإسلامي للجميع",
 
         desc:
-          "تعلم القرآن والدراسات الإسلامية والمعرفة الدينية. طوّر فهمك وابدأ رحلة تعليمية وروحية أفضل.",
+          "تعلم القرآن والحديث والدراسات الإسلامية والمعرفة الدينية لتحسين فهمك وحياتك الروحية.",
 
         button: "سجل الآن",
       },
@@ -69,7 +70,46 @@ export default function HeroSlider({ lang }) {
     },
 
     // =========================================
-    // SLIDE 2 - DIGITAL EDUCATION
+    // SLIDE 2 - ISLAMIC
+    // =========================================
+
+    {
+      category: "islamic",
+
+      ur: {
+        title: "قرآن اور اسلامی تعلیم",
+
+        desc:
+          "ماہر اساتذہ سے قرآن پاک اور اسلامی تعلیم حاصل کریں۔ اپنے علم میں اضافہ کریں اور دینی تربیت کے اس خوبصورت سفر کا آغاز کریں۔",
+
+        button: "ابھی داخلہ لیں",
+      },
+
+      en: {
+        title: "Quran & Islamic Learning",
+
+        desc:
+          "Learn Quran and Islamic studies from qualified teachers. Increase your knowledge and begin your journey of Islamic learning.",
+
+        button: "Enroll Now",
+      },
+
+      ar: {
+        title: "تعلم القرآن والدراسات الإسلامية",
+
+        desc:
+          "تعلم القرآن والدراسات الإسلامية مع معلمين مؤهلين. زد معرفتك وابدأ رحلتك في التعليم الإسلامي.",
+
+        button: "سجل الآن",
+      },
+
+      image: slide2,
+
+      buttonLink: "/login",
+    },
+
+    // =========================================
+    // SLIDE 3 - DIGITAL
     // =========================================
 
     {
@@ -79,7 +119,7 @@ export default function HeroSlider({ lang }) {
         title: "بہتر مستقبل کی طرف",
 
         desc:
-          "جدید ڈیجیٹل ہنر سیکھیں، اپنی صلاحیتوں کو بہتر بنائیں اور مستقبل میں آن لائن مواقع حاصل کرنے کے لیے خود کو تیار کریں۔",
+          "جدید ڈیجیٹل ہنر سیکھیں، اپنی صلاحیتوں کو بہتر بنائیں اور تعلیم و آن لائن کام کے نئے مواقع کے لیے خود کو تیار کریں۔",
 
         button: "ابھی داخلہ لیں",
       },
@@ -102,45 +142,6 @@ export default function HeroSlider({ lang }) {
         button: "سجل الآن",
       },
 
-      image: slide2,
-
-      buttonLink: "/login",
-    },
-
-    // =========================================
-    // SLIDE 3 - EDUCATION
-    // =========================================
-
-    {
-      category: "digital",
-
-      ur: {
-        title: "تعلیم سب کے لیے",
-
-        desc:
-          "ہم بچوں اور نوجوانوں کو معیاری تعلیم اور جدید مہارتوں کے مواقع فراہم کرتے ہیں تاکہ وہ اپنے مستقبل کو بہتر بنا سکیں۔",
-
-        button: "ابھی داخلہ لیں",
-      },
-
-      en: {
-        title: "Education for All",
-
-        desc:
-          "We provide quality education and modern learning opportunities for children and young people to help them build a better future.",
-
-        button: "Enroll Now",
-      },
-
-      ar: {
-        title: "التعليم للجميع",
-
-        desc:
-          "نحن نوفر التعليم الجيد وفرص التعلم الحديثة للأطفال والشباب لمساعدتهم على بناء مستقبل أفضل.",
-
-        button: "سجل الآن",
-      },
-
       image: slide3,
 
       buttonLink: "/login",
@@ -157,7 +158,7 @@ export default function HeroSlider({ lang }) {
         title: "صحت مند معاشرہ",
 
         desc:
-          "صحت ہماری اولین ترجیح ہے۔ بہتر صحت، طبی رہنمائی اور معیاری صحت کی خدمات کے لیے ہمارے پروگرام میں شامل ہوں۔",
+          "صحت ہماری اولین ترجیح ہے۔ معیاری صحت کی خدمات، طبی رہنمائی اور بہتر صحت کے لیے ہمارے پروگرام میں شامل ہوں۔",
 
         button: "اپائنٹمنٹ لیں",
       },
@@ -166,7 +167,7 @@ export default function HeroSlider({ lang }) {
         title: "Healthy Society",
 
         desc:
-          "Health is our priority. Get access to quality healthcare services, medical guidance and support through our health program.",
+          "Health is our priority. Get quality healthcare services, medical guidance and support through our health program.",
 
         button: "Appointment",
       },
@@ -237,8 +238,8 @@ export default function HeroSlider({ lang }) {
   // BUTTON CLICK
   // =========================================
 
-  const handleEnroll = () => {
-    // Save selected category
+  const handleButtonClick = () => {
+    // Save the category of CURRENT slider
     localStorage.setItem("category", slide.category);
 
     // Go to login
@@ -250,38 +251,22 @@ export default function HeroSlider({ lang }) {
   // =========================================
 
   return (
-    <div
-      className="
-        relative
-        h-[60vh]
-        sm:h-[70vh]
-        md:h-[85vh]
-        lg:h-screen
-        overflow-hidden
-      "
-    >
+    <div className="relative h-[60vh] sm:h-[70vh] md:h-[85vh] lg:h-screen overflow-hidden">
+
       {/* =====================================
           BACKGROUND IMAGE
       ====================================== */}
 
       <div
         key={slide.image}
-        className="
-          absolute
-          inset-0
-          bg-center
-          bg-cover
-          bg-no-repeat
-          transition-all
-          duration-1000
-        "
+        className="absolute inset-0 bg-center bg-cover bg-no-repeat transition-all duration-1000"
         style={{
           backgroundImage: `url(${slide.image})`,
         }}
       ></div>
 
       {/* =====================================
-          DARK OVERLAY
+          OVERLAY
       ====================================== */}
 
       <div className="absolute inset-0 bg-black/40"></div>
@@ -290,20 +275,8 @@ export default function HeroSlider({ lang }) {
           CONTENT
       ====================================== */}
 
-      <div
-        className="
-          relative
-          z-10
-          flex
-          flex-col
-          items-center
-          justify-center
-          h-full
-          text-center
-          text-white
-          px-4
-        "
-      >
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+
         {/* TITLE */}
 
         <h1
@@ -337,12 +310,12 @@ export default function HeroSlider({ lang }) {
         </p>
 
         {/* =====================================
-            ONLY ONE BUTTON
+            SINGLE BUTTON
         ====================================== */}
 
         <button
           type="button"
-          onClick={handleEnroll}
+          onClick={handleButtonClick}
           className="
             bg-[#0f4f3f]
             text-white
