@@ -49,7 +49,7 @@ export default function HeroSlider({ lang }) {
         desc:
           "قرآن، اسلامیات اور دینی تعلیم حاصل کریں اور اپنی روحانی زندگی کو بہتر بنائیں۔",
 
-        btn1: "مزید جانیں",
+        
 
         btn2: "داخلہ لیں",
       },
@@ -60,7 +60,7 @@ export default function HeroSlider({ lang }) {
         desc:
           "Learn Quran, Islamic studies and build your spiritual knowledge.",
 
-        btn1: "Learn More",
+       
 
         btn2: "Join Now",
       },
@@ -105,7 +105,7 @@ export default function HeroSlider({ lang }) {
         desc:
           "جدید ڈیجیٹل ہنر سیکھیں اور اپنے مستقبل کے لیے خود کو تیار کریں۔",
 
-        btn1: "مزید پڑھیں",
+        
 
         btn2: "کورس میں شامل ہوں",
       },
@@ -116,7 +116,7 @@ export default function HeroSlider({ lang }) {
         desc:
           "Learn modern digital skills and prepare yourself for the future.",
 
-        btn1: "Learn More",
+       
 
         btn2: "Join Course",
       },
@@ -127,7 +127,7 @@ export default function HeroSlider({ lang }) {
         desc:
           "تعلم المهارات الرقمية الحديثة واستعد لمستقبل أفضل.",
 
-        btn1: "اقرأ المزيد",
+     
 
         btn2: "انضم للدورة",
       },
@@ -161,7 +161,7 @@ export default function HeroSlider({ lang }) {
         desc:
           "ہر بچے اور نوجوان کو معیاری تعلیم کے مواقع فراہم کرنا ہمارا مقصد ہے۔",
 
-        btn1: "مزید جانیں",
+      
 
         btn2: "شروع کریں",
       },
@@ -183,7 +183,6 @@ export default function HeroSlider({ lang }) {
         desc:
           "كل طفل وشاب يستحق الحصول على تعليم جيد.",
 
-        btn1: "المزيد",
 
         btn2: "ابدأ التعلم",
       },
@@ -472,26 +471,26 @@ export default function HeroSlider({ lang }) {
 
           {slide.showBtn1 && slide.btn1Link && (
 
-            <button
-              type="button"
-              onClick={() =>
-                handleButtonClick(
-                  slide.btn1Link
-                )
-              }
-              className="
-                bg-white/20
-                px-6
-                py-2
-                rounded-lg
-                backdrop-blur
-                hover:bg-white/30
-                transition
-                duration-300
-              "
-            >
-              {content.btn1}
-            </button>
+            // <button
+            //   type="button"
+            //   onClick={() =>
+            //     handleButtonClick(
+            //       slide.btn1Link
+            //     )
+            //   }
+            //   className="
+            //     bg-white/20
+            //     px-6
+            //     py-2
+            //     rounded-lg
+            //     backdrop-blur
+            //     hover:bg-white/30
+            //     transition
+            //     duration-300
+            //   "
+            // >
+            //   {content.btn1}
+            // </button>
 
           )}
 
