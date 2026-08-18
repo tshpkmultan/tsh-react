@@ -227,21 +227,43 @@ export default function TeamSection({ lang }) {
      1. Islamic Teacher
      2. Digital Trainer
      3. Doctor / Other
-  ===================================== */
+ /* =====================================
+   SORT BY JOINING DATE
+   OLD → LATEST
+===================================== */
 
-  const islamicTeachers = members.filter(
-    member => member.role === "Islamic Teacher"
-  );
+const sortOldToLatest = (a, b) => {
+  const dateA = a.joining_date
+    ? new Date(a.joining_date).getTime()
+    : Infinity;
 
-  const digitalTrainers = members.filter(
-    member => member.role === "Digital Trainer"
-  );
+  const dateB = b.joining_date
+    ? new Date(b.joining_date).getTime()
+    : Infinity;
 
-  const otherMembers = members.filter(
+  return dateA - dateB;
+};
+
+
+/* =====================================
+   TEAM GROUPS
+===================================== */
+
+const islamicTeachers = members
+  .filter(member => member.role === "Islamic Teacher")
+  .sort(sortOldToLatest);
+
+const digitalTrainers = members
+  .filter(member => member.role === "Digital Trainer")
+  .sort(sortOldToLatest);
+
+const otherMembers = members
+  .filter(
     member =>
       member.role !== "Islamic Teacher" &&
       member.role !== "Digital Trainer"
-  );
+  )
+  .sort(sortOldToLatest);
 
 
   /* =====================================
