@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import {
   LayoutDashboard,
   Calendar,
-  Users,
   BookOpen,
   GraduationCap,
   Award,
@@ -23,18 +22,18 @@ import {
 export default function DashboardSection({ lang = "en" }) {
   const content = {
     en: {
-      badge: "Student Dashboard",
+      badge: "Smart Learning Platform",
 
       title: "Everything You Need In",
 
-      highlight: "One Smart Dashboard",
+      highlight: "One Smart Learning Experience",
 
       description:
-        "Manage your complete learning journey from one powerful dashboard. Access classes, assignments, attendance, teachers, certificates and announcements anytime.",
+        "Explore a complete learning experience where students can access classes, learning materials, teachers, assignments, certificates and important updates from one place.",
 
-      button: "Open Dashboard",
+      button: "Explore Categories",
 
-      secondaryButton: "Explore Features",
+      secondaryButton: "View All",
 
       serviceHighlights: [
         {
@@ -89,16 +88,16 @@ export default function DashboardSection({ lang = "en" }) {
         class2: "Quran Class",
         class2Time: "11:00 AM - 12:00 PM",
 
-        assignment: "Web Development Assignment",
-        assignmentDue: "Due Tomorrow",
-
         notice: "New course material has been uploaded.",
+
+        certificates: "Certificates",
+        certificatesDesc: "Available after course completion",
       },
 
       featuresTitle: "Everything In One Place",
 
       featuresDescription:
-        "Our student dashboard gives learners instant access to everything they need including schedules, learning resources, certificates, communication and progress tracking.",
+        "Our learning platform gives students easy access to schedules, learning resources, certificates, communication and progress tracking.",
 
       features: [
         {
@@ -142,44 +141,44 @@ export default function DashboardSection({ lang = "en" }) {
       ],
 
       cta: {
-        badge: "Smart Learning Platform",
+        badge: "Explore TSH",
 
         title: "Learn.",
 
-        highlight: "Track.",
+        highlight: "Grow.",
 
         final: "Succeed.",
 
         description:
-          "Access your classes, assignments, certificates, attendance, notices and teachers from one secure dashboard anytime and anywhere.",
+          "Choose the category that matches your needs and continue to the right learning, health or skills experience.",
 
-        dashboard: "Dashboard",
-        dashboardStatus: "Ready to use",
+        dashboard: "Taleem",
+        dashboardStatus: "Education",
 
-        courses: "Learning Resources",
-        coursesStatus: "Available",
+        courses: "Sehat",
+        coursesStatus: "Healthcare",
 
-        certificates: "Certificates",
-        certificatesStatus: "Accessible",
+        certificates: "Hunar",
+        certificatesStatus: "Skills",
 
-        communication: "Teacher Communication",
-        communicationStatus: "Connected",
+        communication: "Choose Your Category",
+        communicationStatus: "Get Started",
       },
     },
 
     ur: {
-      badge: "اسٹوڈنٹ ڈیش بورڈ",
+      badge: "اسمارٹ لرننگ پلیٹ فارم",
 
       title: "تمام سہولیات",
 
-      highlight: "ایک جدید ڈیش بورڈ",
+      highlight: "ایک جدید تعلیمی تجربہ",
 
       description:
-        "اپنی کلاسز، اسائنمنٹس، اساتذہ، سرٹیفکیٹس اور شیڈول ایک ہی جگہ سے منظم کریں۔",
+        "ایک مکمل تعلیمی پلیٹ فارم جہاں طلبہ کلاسز، تعلیمی مواد، اساتذہ، اسائنمنٹس، سرٹیفکیٹس اور اہم معلومات تک ایک ہی جگہ سے رسائی حاصل کر سکتے ہیں۔",
 
-      button: "ڈیش بورڈ کھولیں",
+      button: "کیٹیگریز دیکھیں",
 
-      secondaryButton: "خصوصیات دیکھیں",
+      secondaryButton: "سب دیکھیں",
 
       serviceHighlights: [
         {
@@ -234,16 +233,16 @@ export default function DashboardSection({ lang = "en" }) {
         class2: "قرآن کلاس",
         class2Time: "11:00 صبح - 12:00 دوپہر",
 
-        assignment: "ویب ڈویلپمنٹ اسائنمنٹ",
-        assignmentDue: "کل آخری تاریخ",
-
         notice: "نیا کورس میٹریل اپ لوڈ کر دیا گیا ہے۔",
+
+        certificates: "سرٹیفکیٹس",
+        certificatesDesc: "کورس مکمل ہونے کے بعد دستیاب",
       },
 
       featuresTitle: "تمام سہولیات ایک جگہ",
 
       featuresDescription:
-        "ہمارا اسٹوڈنٹ ڈیش بورڈ طلبہ کو شیڈول، تعلیمی مواد، سرٹیفکیٹس، رابطے اور تعلیمی پروگریس تک آسان رسائی فراہم کرتا ہے۔",
+        "ہمارا لرننگ پلیٹ فارم طلبہ کو شیڈول، تعلیمی مواد، سرٹیفکیٹس، رابطے اور تعلیمی پروگریس تک آسان رسائی فراہم کرتا ہے۔",
 
       features: [
         {
@@ -287,44 +286,44 @@ export default function DashboardSection({ lang = "en" }) {
       ],
 
       cta: {
-        badge: "اسمارٹ لرننگ پلیٹ فارم",
+        badge: "TSH دریافت کریں",
 
         title: "سیکھیں۔",
 
-        highlight: "پروگریس دیکھیں۔",
+        highlight: "آگے بڑھیں۔",
 
         final: "کامیاب ہوں۔",
 
         description:
-          "کلاسز، اسائنمنٹس، سرٹیفکیٹس، حاضری، اطلاعات اور اساتذہ تک ایک محفوظ ڈیش بورڈ سے کسی بھی وقت رسائی حاصل کریں۔",
+          "اپنی ضرورت کے مطابق کیٹیگری منتخب کریں اور متعلقہ تعلیم، صحت یا ہنر کے پلیٹ فارم پر جائیں۔",
 
-        dashboard: "ڈیش بورڈ",
-        dashboardStatus: "استعمال کے لیے تیار",
+        dashboard: "تعلیم",
+        dashboardStatus: "Taleem",
 
-        courses: "تعلیمی مواد",
-        coursesStatus: "دستیاب",
+        courses: "صحت",
+        coursesStatus: "Sehat",
 
-        certificates: "سرٹیفکیٹس",
-        certificatesStatus: "دستیاب",
+        certificates: "ہنر",
+        certificatesStatus: "Hunar",
 
-        communication: "اساتذہ سے رابطہ",
-        communicationStatus: "منسلک",
+        communication: "اپنی کیٹیگری منتخب کریں",
+        communicationStatus: "شروع کریں",
       },
     },
 
     ar: {
-      badge: "لوحة الطالب",
+      badge: "منصة تعليمية ذكية",
 
       title: "كل ما تحتاجه",
 
-      highlight: "في لوحة ذكية",
+      highlight: "في تجربة تعليمية واحدة",
 
       description:
-        "يمكنك إدارة الدورات والواجبات والشهادات والمدرسين بسهولة من لوحة تحكم واحدة.",
+        "تجربة تعليمية متكاملة تتيح للطلاب الوصول إلى الدروس والمواد التعليمية والمعلمين والواجبات والشهادات والتحديثات المهمة من مكان واحد.",
 
-      button: "فتح اللوحة",
+      button: "استكشف الأقسام",
 
-      secondaryButton: "استكشف الميزات",
+      secondaryButton: "عرض الكل",
 
       serviceHighlights: [
         {
@@ -379,16 +378,16 @@ export default function DashboardSection({ lang = "en" }) {
         class2: "درس القرآن",
         class2Time: "11:00 صباحاً - 12:00 ظهراً",
 
-        assignment: "واجب تطوير الويب",
-        assignmentDue: "موعد التسليم غداً",
-
         notice: "تم رفع مواد تعليمية جديدة.",
+
+        certificates: "الشهادات",
+        certificatesDesc: "متاحة بعد إكمال الدورة",
       },
 
       featuresTitle: "كل شيء في مكان واحد",
 
       featuresDescription:
-        "توفر لوحة الطالب وصولاً سريعاً إلى الجداول والمواد التعليمية والشهادات والتواصل ومتابعة التقدم.",
+        "توفر منصة التعلم وصولاً سهلاً إلى الجداول والمواد التعليمية والشهادات والتواصل ومتابعة التقدم.",
 
       features: [
         {
@@ -432,28 +431,28 @@ export default function DashboardSection({ lang = "en" }) {
       ],
 
       cta: {
-        badge: "منصة تعليمية ذكية",
+        badge: "اكتشف TSH",
 
         title: "تعلم.",
 
-        highlight: "تابع تقدمك.",
+        highlight: "تطور.",
 
-        final: "انجح.",
+        final: "تنجح.",
 
         description:
-          "يمكنك الوصول إلى الدروس والواجبات والشهادات والحضور والإشعارات والمعلمين من لوحة واحدة آمنة في أي وقت ومن أي مكان.",
+          "اختر القسم الذي يناسب احتياجاتك وانتقل إلى تجربة التعليم أو الصحة أو المهارات المناسبة لك.",
 
-        dashboard: "لوحة التحكم",
-        dashboardStatus: "جاهزة للاستخدام",
+        dashboard: "تعليم",
+        dashboardStatus: "Taleem",
 
-        courses: "المواد التعليمية",
-        coursesStatus: "متاحة",
+        courses: "صحة",
+        coursesStatus: "Sehat",
 
-        certificates: "الشهادات",
-        certificatesStatus: "متاحة",
+        certificates: "مهارات",
+        certificatesStatus: "Hunar",
 
-        communication: "التواصل مع المعلمين",
-        communicationStatus: "متصل",
+        communication: "اختر القسم الخاص بك",
+        communicationStatus: "ابدأ الآن",
       },
     },
   };
@@ -461,6 +460,26 @@ export default function DashboardSection({ lang = "en" }) {
   const t = content[lang] || content.en;
 
   const isRTL = lang === "ur" || lang === "ar";
+
+  /*
+   * ============================================================
+   * IMPORTANT NAVIGATION
+   * ============================================================
+   *
+   * All category/discovery buttons first go to:
+   *
+   * https://www.tshpk.com/category
+   *
+   * The category page should then allow the user to select:
+   *
+   * 1. Taleem
+   * 2. Sehat
+   * 3. Hunar
+   *
+   * ============================================================
+   */
+
+  const categoryPath = "/category";
 
   return (
     <section
@@ -471,7 +490,7 @@ export default function DashboardSection({ lang = "en" }) {
           BACKGROUND EFFECTS
       ====================================================== */}
 
-      <div className="pointer-events-none absolute -top-40 -left-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[130px]" />
+      <div className="pointer-events-none absolute -left-40 -top-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[130px]" />
 
       <div className="pointer-events-none absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-yellow-400/10 blur-[130px]" />
 
@@ -497,6 +516,7 @@ export default function DashboardSection({ lang = "en" }) {
 
             <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-white/10 px-4 py-2 text-sm font-semibold text-cyan-200 shadow-lg backdrop-blur-md sm:px-5">
               <LayoutDashboard size={17} />
+
               <span>{t.badge}</span>
             </div>
 
@@ -516,12 +536,16 @@ export default function DashboardSection({ lang = "en" }) {
               {t.description}
             </p>
 
-            {/* Buttons */}
+            {/* =================================================
+                MAIN CATEGORY BUTTONS
+            ================================================== */}
 
             <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
 
+              {/* Explore Categories */}
+
               <Link
-                to="/login"
+                to={categoryPath}
                 className="group inline-flex items-center justify-center gap-3 rounded-2xl bg-yellow-400 px-7 py-4 font-bold text-[#0b2d36] shadow-xl shadow-yellow-400/10 transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-2xl sm:px-8"
               >
                 {t.button}
@@ -532,19 +556,27 @@ export default function DashboardSection({ lang = "en" }) {
                 />
               </Link>
 
-              <a
-                href="#dashboard-features"
-                className="inline-flex items-center justify-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 sm:px-8"
+              {/* View All */}
+
+              <Link
+                to={categoryPath}
+                className="group inline-flex items-center justify-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 sm:px-8"
               >
                 <BookOpen size={20} />
+
                 {t.secondaryButton}
-              </a>
+
+                <ArrowRight
+                  size={18}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </Link>
 
             </div>
 
-            {/* =====================================================
+            {/* =================================================
                 SERVICE HIGHLIGHTS
-            ====================================================== */}
+            ================================================== */}
 
             <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
 
@@ -552,8 +584,9 @@ export default function DashboardSection({ lang = "en" }) {
                 const Icon = item.icon;
 
                 return (
-                  <div
+                  <Link
                     key={index}
+                    to={categoryPath}
                     className="group rounded-2xl border border-white/10 bg-white/[0.07] p-5 text-left backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/10"
                   >
                     <div className="flex items-start gap-4">
@@ -573,7 +606,7 @@ export default function DashboardSection({ lang = "en" }) {
                       </div>
 
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
 
@@ -606,6 +639,7 @@ export default function DashboardSection({ lang = "en" }) {
 
                 <div className="flex items-center gap-2 text-xs font-semibold text-white sm:text-sm">
                   <LayoutDashboard size={16} />
+
                   {t.dashboard.title}
                 </div>
 
@@ -862,7 +896,10 @@ export default function DashboardSection({ lang = "en" }) {
                 FLOATING CERTIFICATE CARD
             ================================================== */}
 
-            <div className="absolute -bottom-5 left-1/2 hidden -translate-x-1/2 items-center gap-4 rounded-2xl border border-slate-100 bg-white px-5 py-4 shadow-2xl sm:flex lg:-left-12 lg:translate-x-0">
+            <Link
+              to={categoryPath}
+              className="absolute -bottom-5 left-1/2 hidden -translate-x-1/2 items-center gap-4 rounded-2xl border border-slate-100 bg-white px-5 py-4 shadow-2xl transition duration-300 hover:-translate-y-1 sm:flex lg:-left-12 lg:translate-x-0"
+            >
 
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100">
                 <Award
@@ -876,10 +913,17 @@ export default function DashboardSection({ lang = "en" }) {
                   {t.dashboard.certificates}
                 </h4>
 
-              
+                <p className="text-xs text-slate-500">
+                  {t.dashboard.certificatesDesc}
+                </p>
               </div>
 
-            </div>
+              <ArrowRight
+                size={17}
+                className="text-cyan-700"
+              />
+
+            </Link>
 
           </div>
         </div>
@@ -899,6 +943,7 @@ export default function DashboardSection({ lang = "en" }) {
 
             <span className="inline-flex items-center gap-2 rounded-full bg-cyan-400/10 px-5 py-2 text-sm font-semibold text-cyan-300">
               <LayoutDashboard size={17} />
+
               Dashboard Features
             </span>
 
@@ -920,8 +965,9 @@ export default function DashboardSection({ lang = "en" }) {
               const Icon = feature.icon;
 
               return (
-                <div
+                <Link
                   key={index}
+                  to={categoryPath}
                   className="group rounded-3xl border border-white/10 bg-white/[0.07] p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-cyan-300/30 hover:bg-white/10 sm:p-7"
                 >
 
@@ -937,6 +983,8 @@ export default function DashboardSection({ lang = "en" }) {
                     {feature.desc}
                   </p>
 
+                  {/* View All → Category Page */}
+
                   <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-cyan-300">
                     <span>{t.dashboard.viewAll}</span>
 
@@ -946,7 +994,7 @@ export default function DashboardSection({ lang = "en" }) {
                     />
                   </div>
 
-                </div>
+                </Link>
               );
             })}
 
@@ -962,14 +1010,15 @@ export default function DashboardSection({ lang = "en" }) {
               const Icon = item.icon;
 
               return (
-                <div
+                <Link
                   key={index}
-                  className="rounded-3xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-xl transition duration-300 hover:bg-white/[0.08] sm:p-7"
+                  to={categoryPath}
+                  className="group rounded-3xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-white/[0.08] sm:p-7"
                 >
 
                   <div className="flex items-center gap-4">
 
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300 transition duration-300 group-hover:scale-110">
                       <Icon size={27} />
                     </div>
 
@@ -985,7 +1034,7 @@ export default function DashboardSection({ lang = "en" }) {
 
                   </div>
 
-                </div>
+                </Link>
               );
             })}
 
@@ -994,7 +1043,7 @@ export default function DashboardSection({ lang = "en" }) {
         </div>
 
         {/* =====================================================
-            PREMIUM CTA
+            PREMIUM CATEGORY CTA
         ====================================================== */}
 
         <div className="mt-24 sm:mt-28">
@@ -1009,12 +1058,13 @@ export default function DashboardSection({ lang = "en" }) {
 
             <div className="relative z-10 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
 
-              {/* Left */}
+              {/* LEFT */}
 
               <div>
 
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-cyan-200 backdrop-blur-md">
                   <LayoutDashboard size={17} />
+
                   {t.cta.badge}
                 </span>
 
@@ -1037,7 +1087,7 @@ export default function DashboardSection({ lang = "en" }) {
                 </p>
 
                 <Link
-                  to="/login"
+                  to={categoryPath}
                   className="group mt-8 inline-flex items-center gap-3 rounded-2xl bg-yellow-400 px-7 py-4 font-bold text-[#0b2d36] shadow-xl transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
                 >
                   {t.button}
@@ -1050,107 +1100,131 @@ export default function DashboardSection({ lang = "en" }) {
 
               </div>
 
-              {/* Right Status Panel */}
+              {/* =================================================
+                  CATEGORY SELECTION PREVIEW
+              ================================================== */}
 
               <div className="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur-xl sm:p-7">
 
-                <div className="space-y-3">
+                <div className="mb-5">
 
-                  {/* Dashboard */}
+                  <h3 className="text-lg font-bold text-white sm:text-xl">
+                    {t.cta.communication}
+                  </h3>
 
-                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 sm:px-5">
-
-                    <div className="flex items-center gap-3">
-
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
-                        <LayoutDashboard size={20} />
-                      </div>
-
-                      <span className="text-sm font-semibold text-white">
-                        {t.cta.dashboard}
-                      </span>
-
-                    </div>
-
-                    <span className="text-xs font-bold text-green-400">
-                      {t.cta.dashboardStatus}
-                    </span>
-
-                  </div>
-
-                  {/* Learning Resources */}
-
-                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 sm:px-5">
-
-                    <div className="flex items-center gap-3">
-
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-400/10 text-yellow-300">
-                        <BookOpen size={20} />
-                      </div>
-
-                      <span className="text-sm font-semibold text-white">
-                        {t.cta.courses}
-                      </span>
-
-                    </div>
-
-                    <span className="text-xs font-bold text-yellow-300">
-                      {t.cta.coursesStatus}
-                    </span>
-
-                  </div>
-
-                  {/* Certificates */}
-
-                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 sm:px-5">
-
-                    <div className="flex items-center gap-3">
-
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-400/10 text-green-300">
-                        <Award size={20} />
-                      </div>
-
-                      <span className="text-sm font-semibold text-white">
-                        {t.cta.certificates}
-                      </span>
-
-                    </div>
-
-                    <span className="text-xs font-bold text-green-400">
-                      {t.cta.certificatesStatus}
-                    </span>
-
-                  </div>
-
-                  {/* Communication */}
-
-                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 sm:px-5">
-
-                    <div className="flex items-center gap-3">
-
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-400/10 text-purple-300">
-                        <MessageCircle size={20} />
-                      </div>
-
-                      <span className="text-sm font-semibold text-white">
-                        {t.cta.communication}
-                      </span>
-
-                    </div>
-
-                    <span className="text-xs font-bold text-purple-300">
-                      {t.cta.communicationStatus}
-                    </span>
-
-                  </div>
+                  <p className="mt-1 text-sm text-slate-400">
+                    {t.cta.communicationStatus}
+                  </p>
 
                 </div>
 
+                <div className="space-y-3">
+
+                  {/* Taleem */}
+
+                  <Link
+                    to={categoryPath}
+                    className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:bg-white/15 sm:px-5"
+                  >
+
+                    <div className="flex items-center gap-3">
+
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
+                        <GraduationCap size={21} />
+                      </div>
+
+                      <div>
+                        <span className="block text-sm font-bold text-white">
+                          {t.cta.dashboard}
+                        </span>
+
+                        <span className="text-xs text-slate-400">
+                          {t.cta.dashboardStatus}
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <ArrowRight
+                      size={18}
+                      className="text-cyan-300 transition-transform group-hover:translate-x-1"
+                    />
+
+                  </Link>
+
+                  {/* Sehat */}
+
+                  <Link
+                    to={categoryPath}
+                    className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:bg-white/15 sm:px-5"
+                  >
+
+                    <div className="flex items-center gap-3">
+
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-green-400/10 text-green-300">
+                        <CheckCircle size={21} />
+                      </div>
+
+                      <div>
+                        <span className="block text-sm font-bold text-white">
+                          {t.cta.courses}
+                        </span>
+
+                        <span className="text-xs text-slate-400">
+                          {t.cta.coursesStatus}
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <ArrowRight
+                      size={18}
+                      className="text-green-300 transition-transform group-hover:translate-x-1"
+                    />
+
+                  </Link>
+
+                  {/* Hunar */}
+
+                  <Link
+                    to={categoryPath}
+                    className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 transition duration-300 hover:-translate-y-1 hover:bg-white/15 sm:px-5"
+                  >
+
+                    <div className="flex items-center gap-3">
+
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-yellow-400/10 text-yellow-300">
+                        <Award size={21} />
+                      </div>
+
+                      <div>
+                        <span className="block text-sm font-bold text-white">
+                          {t.cta.certificates}
+                        </span>
+
+                        <span className="text-xs text-slate-400">
+                          {t.cta.certificatesStatus}
+                        </span>
+                      </div>
+
+                    </div>
+
+                    <ArrowRight
+                      size={18}
+                      className="text-yellow-300 transition-transform group-hover:translate-x-1"
+                    />
+
+                  </Link>
+
+                </div>
+
+                {/* Main Category Button */}
+
                 <Link
-                  to="/login"
+                  to={categoryPath}
                   className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-yellow-400 py-4 font-bold text-[#0b2d36] shadow-xl transition duration-300 hover:bg-yellow-300 hover:shadow-2xl"
                 >
-                  {t.button}
+                  {t.secondaryButton}
 
                   <ArrowRight size={21} />
                 </Link>
