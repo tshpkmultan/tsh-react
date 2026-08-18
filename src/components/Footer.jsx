@@ -227,21 +227,21 @@ export default function Footer({ lang = "en" }) {
                 {t.contact}
               </h3>
 
-              <a
-                href="tel:+923350093500"
-                className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition"
-              >
-                <Phone size={16} />
-                +92 335 0093500
-              </a>
+           <a
+  href="tel:+923097667058"
+  className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition"
+>
+  <Phone size={16} />
+  +92 309 7667058
+</a>
 
-              <a
-                href="mailto:support@eduhealth.com"
-                className="flex items-center gap-2 mt-3 text-gray-400 hover:text-yellow-400 transition"
-              >
-                <Mail size={16} />
-                support@eduhealth.com
-              </a>
+             <a
+  href="mailto:tshpk.com@gmail.com"
+  className="flex items-center gap-2 mt-3 text-gray-400 hover:text-yellow-400 transition"
+>
+  <Mail size={16} />
+  tshpk.com@gmail.com
+</a>
 
               <div className="mt-5 rounded-lg bg-gray-900 border border-gray-700 p-4 text-sm text-gray-300">
                 ⚠ {t.payment}
@@ -272,12 +272,12 @@ export default function Footer({ lang = "en" }) {
       </footer>
 
       {/* WhatsApp Floating Button */}
-      <a
-        href="https://wa.me/923350093500?text=Hello%20I%20need%20information"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-xl hover:scale-110 transition"
-      >
+    <a
+  href="https://wa.me/923097667058?text=Hello%20I%20need%20information"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-xl transition hover:scale-110"
+>
         <FaWhatsapp size={28} />
       </a>
     </>
