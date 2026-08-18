@@ -220,42 +220,41 @@ export default function TeamSection({ lang }) {
 
   };
 
-
-  /* =====================================
-     FIXED ROLE SEQUENCE
-     
-     1. Islamic Teacher
-     2. Digital Trainer
-     3. Doctor / Other
- /* =====================================
-   SORT BY JOINING DATE
-   OLD → LATEST
+/* =====================================
+   TEAM GROUPS
+   OLDEST RECORD → LATEST RECORD
+   Based on database ID
 ===================================== */
 
 const sortOldToLatest = (a, b) => {
-  const dateA = a.joining_date
-    ? new Date(a.joining_date).getTime()
-    : Infinity;
+  const idA = Number(a.id) || 0;
+  const idB = Number(b.id) || 0;
 
-  const dateB = b.joining_date
-    ? new Date(b.joining_date).getTime()
-    : Infinity;
-
-  return dateA - dateB;
+  return idA - idB;
 };
 
 
 /* =====================================
-   TEAM GROUPS
+   ISLAMIC TEACHERS
 ===================================== */
 
 const islamicTeachers = members
   .filter(member => member.role === "Islamic Teacher")
   .sort(sortOldToLatest);
 
+
+/* =====================================
+   DIGITAL TRAINERS
+===================================== */
+
 const digitalTrainers = members
   .filter(member => member.role === "Digital Trainer")
   .sort(sortOldToLatest);
+
+
+/* =====================================
+   DOCTORS / OTHER EXPERTS
+===================================== */
 
 const otherMembers = members
   .filter(
@@ -264,7 +263,6 @@ const otherMembers = members
       member.role !== "Digital Trainer"
   )
   .sort(sortOldToLatest);
-
 
   /* =====================================
      TEAM CARD
