@@ -1,3 +1,5 @@
+// src/components/DashboardSection.jsx
+
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -11,60 +13,158 @@ import {
   MessageCircle,
   ArrowRight,
   CheckCircle,
+  ClipboardCheck,
+  Bell,
+  FileText,
+  Clock3,
+  PlayCircle,
 } from "lucide-react";
 
 export default function DashboardSection({ lang = "en" }) {
   const content = {
     en: {
       badge: "Student Dashboard",
+
       title: "Everything You Need In",
+
       highlight: "One Smart Dashboard",
+
       description:
         "Manage your complete learning journey from one powerful dashboard. Access classes, assignments, attendance, teachers, certificates and announcements anytime.",
 
       button: "Open Dashboard",
 
-      stats: [
+      secondaryButton: "Explore Features",
+
+      serviceHighlights: [
         {
-          number: "10K+",
-          label: "Students",
+          icon: Calendar,
+          title: "Class Schedule",
+          desc: "Stay organized with your upcoming classes and learning sessions.",
         },
         {
-          number: "250+",
-          label: "Courses",
+          icon: ClipboardCheck,
+          title: "Track Progress",
+          desc: "Monitor assignments, attendance and your academic progress.",
         },
         {
-          number: "500+",
-          label: "Teachers",
+          icon: MessageCircle,
+          title: "Stay Connected",
+          desc: "Communicate with teachers and stay updated with important notices.",
         },
         {
-          number: "98%",
-          label: "Success Rate",
+          icon: Award,
+          title: "Earn Certificates",
+          desc: "Access your certificates after successfully completing courses.",
         },
       ],
+
+      dashboard: {
+        title: "Student Dashboard",
+        welcome: "Welcome back!",
+        overview: "Your Learning Overview",
+
+        classes: "Today's Classes",
+        classesDesc: "Stay on top of your learning schedule.",
+
+        assignments: "Assignments",
+        assignmentsDesc: "Review and manage your pending work.",
+
+        attendance: "Attendance",
+        attendanceDesc: "Keep track of your class attendance.",
+
+        notices: "Latest Notices",
+        noticesDesc: "Stay updated with important announcements.",
+
+        viewAll: "View All",
+
+        live: "Live Now",
+        upcoming: "Upcoming",
+        pending: "Pending",
+        completed: "Completed",
+
+        class1: "React Development",
+        class1Time: "09:00 AM - 10:30 AM",
+
+        class2: "Quran Class",
+        class2Time: "11:00 AM - 12:00 PM",
+
+        assignment: "Web Development Assignment",
+        assignmentDue: "Due Tomorrow",
+
+        notice: "New course material has been uploaded.",
+      },
+
+      featuresTitle: "Everything In One Place",
+
+      featuresDescription:
+        "Our student dashboard gives learners instant access to everything they need including schedules, learning resources, certificates, communication and progress tracking.",
 
       features: [
         {
           icon: Calendar,
           title: "Class Schedule",
-          desc: "View upcoming classes and timings.",
+          desc: "View upcoming classes, timings and important learning sessions.",
         },
         {
           icon: MessageCircle,
-          title: "WhatsApp Groups",
-          desc: "Stay connected with teachers.",
+          title: "Teacher Communication",
+          desc: "Stay connected with teachers and receive important updates.",
         },
         {
           icon: Folder,
           title: "Learning Material",
-          desc: "Download notes and lectures.",
+          desc: "Access notes, lectures, documents and course resources.",
         },
         {
           icon: Award,
           title: "Certificates",
-          desc: "Receive digital certificates.",
+          desc: "Access and download your digital certificates anytime.",
         },
       ],
+
+      highlights: [
+        {
+          icon: Calendar,
+          title: "Daily Schedule",
+          desc: "Never miss an important class.",
+        },
+        {
+          icon: MessageCircle,
+          title: "Community Support",
+          desc: "Stay connected with your teachers.",
+        },
+        {
+          icon: Award,
+          title: "Verified Certificates",
+          desc: "Access certificates after course completion.",
+        },
+      ],
+
+      cta: {
+        badge: "Smart Learning Platform",
+
+        title: "Learn.",
+
+        highlight: "Track.",
+
+        final: "Succeed.",
+
+        description:
+          "Access your classes, assignments, certificates, attendance, notices and teachers from one secure dashboard anytime and anywhere.",
+
+        dashboard: "Dashboard",
+        dashboardStatus: "Ready to use",
+
+        courses: "Learning Resources",
+        coursesStatus: "Available",
+
+        certificates: "Certificates",
+        certificatesStatus: "Accessible",
+
+        communication: "Teacher Communication",
+        communicationStatus: "Connected",
+      },
     },
 
     ur: {
@@ -79,47 +179,137 @@ export default function DashboardSection({ lang = "en" }) {
 
       button: "ڈیش بورڈ کھولیں",
 
-      stats: [
+      secondaryButton: "خصوصیات دیکھیں",
+
+      serviceHighlights: [
         {
-          number: "10K+",
-          label: "طلبہ",
+          icon: Calendar,
+          title: "کلاس شیڈول",
+          desc: "اپنی آنے والی کلاسز اور تعلیمی سیشنز کو منظم رکھیں۔",
         },
         {
-          number: "250+",
-          label: "کورسز",
+          icon: ClipboardCheck,
+          title: "پروگریس دیکھیں",
+          desc: "اسائنمنٹس، حاضری اور تعلیمی کارکردگی کو مانیٹر کریں۔",
         },
         {
-          number: "500+",
-          label: "اساتذہ",
+          icon: MessageCircle,
+          title: "رابطے میں رہیں",
+          desc: "اساتذہ سے رابطہ کریں اور اہم اطلاعات حاصل کریں۔",
         },
         {
-          number: "98%",
-          label: "کامیابی",
+          icon: Award,
+          title: "سرٹیفکیٹس حاصل کریں",
+          desc: "کورس مکمل کرنے کے بعد اپنے سرٹیفکیٹس حاصل کریں۔",
         },
       ],
+
+      dashboard: {
+        title: "اسٹوڈنٹ ڈیش بورڈ",
+        welcome: "خوش آمدید!",
+        overview: "آپ کی تعلیمی معلومات",
+
+        classes: "آج کی کلاسز",
+        classesDesc: "اپنے تعلیمی شیڈول سے باخبر رہیں۔",
+
+        assignments: "اسائنمنٹس",
+        assignmentsDesc: "اپنے زیر التواء کام دیکھیں۔",
+
+        attendance: "حاضری",
+        attendanceDesc: "اپنی کلاس حاضری چیک کریں۔",
+
+        notices: "تازہ اطلاعات",
+        noticesDesc: "اہم اعلانات سے باخبر رہیں۔",
+
+        viewAll: "سب دیکھیں",
+
+        live: "جاری ہے",
+        upcoming: "آنے والی",
+        pending: "زیر التواء",
+        completed: "مکمل",
+
+        class1: "ری ایکٹ ڈویلپمنٹ",
+        class1Time: "09:00 صبح - 10:30 صبح",
+
+        class2: "قرآن کلاس",
+        class2Time: "11:00 صبح - 12:00 دوپہر",
+
+        assignment: "ویب ڈویلپمنٹ اسائنمنٹ",
+        assignmentDue: "کل آخری تاریخ",
+
+        notice: "نیا کورس میٹریل اپ لوڈ کر دیا گیا ہے۔",
+      },
+
+      featuresTitle: "تمام سہولیات ایک جگہ",
+
+      featuresDescription:
+        "ہمارا اسٹوڈنٹ ڈیش بورڈ طلبہ کو شیڈول، تعلیمی مواد، سرٹیفکیٹس، رابطے اور تعلیمی پروگریس تک آسان رسائی فراہم کرتا ہے۔",
 
       features: [
         {
           icon: Calendar,
-          title: "شیڈول",
-          desc: "تمام کلاسوں کا شیڈول۔",
+          title: "کلاس شیڈول",
+          desc: "آنے والی کلاسز، اوقات اور اہم تعلیمی سیشنز دیکھیں۔",
         },
         {
           icon: MessageCircle,
-          title: "واٹس ایپ",
-          desc: "اساتذہ سے رابطہ کریں۔",
+          title: "اساتذہ سے رابطہ",
+          desc: "اساتذہ سے رابطے میں رہیں اور اہم معلومات حاصل کریں۔",
         },
         {
           icon: Folder,
-          title: "مطالعہ مواد",
-          desc: "نوٹس اور لیکچرز حاصل کریں۔",
+          title: "تعلیمی مواد",
+          desc: "نوٹس، لیکچرز، ڈاکومنٹس اور کورس میٹریل حاصل کریں۔",
         },
         {
           icon: Award,
           title: "سرٹیفکیٹس",
-          desc: "آن لائن سرٹیفکیٹس حاصل کریں۔",
+          desc: "اپنے ڈیجیٹل سرٹیفکیٹس کسی بھی وقت حاصل کریں۔",
         },
       ],
+
+      highlights: [
+        {
+          icon: Calendar,
+          title: "روزانہ شیڈول",
+          desc: "اہم کلاس کبھی نہ چھوڑیں۔",
+        },
+        {
+          icon: MessageCircle,
+          title: "کمیونٹی سپورٹ",
+          desc: "اپنے اساتذہ سے رابطے میں رہیں۔",
+        },
+        {
+          icon: Award,
+          title: "تصدیق شدہ سرٹیفکیٹس",
+          desc: "کورس مکمل ہونے کے بعد سرٹیفکیٹ حاصل کریں۔",
+        },
+      ],
+
+      cta: {
+        badge: "اسمارٹ لرننگ پلیٹ فارم",
+
+        title: "سیکھیں۔",
+
+        highlight: "پروگریس دیکھیں۔",
+
+        final: "کامیاب ہوں۔",
+
+        description:
+          "کلاسز، اسائنمنٹس، سرٹیفکیٹس، حاضری، اطلاعات اور اساتذہ تک ایک محفوظ ڈیش بورڈ سے کسی بھی وقت رسائی حاصل کریں۔",
+
+        dashboard: "ڈیش بورڈ",
+        dashboardStatus: "استعمال کے لیے تیار",
+
+        courses: "تعلیمی مواد",
+        coursesStatus: "دستیاب",
+
+        certificates: "سرٹیفکیٹس",
+        certificatesStatus: "دستیاب",
+
+        communication: "اساتذہ سے رابطہ",
+        communicationStatus: "منسلک",
+      },
     },
 
     ar: {
@@ -134,789 +324,824 @@ export default function DashboardSection({ lang = "en" }) {
 
       button: "فتح اللوحة",
 
-      stats: [
-        {
-          number: "10K+",
-          label: "طلاب",
-        },
-        {
-          number: "250+",
-          label: "دورات",
-        },
-        {
-          number: "500+",
-          label: "معلمون",
-        },
-        {
-          number: "98%",
-          label: "نجاح",
-        },
-      ],
+      secondaryButton: "استكشف الميزات",
 
-      features: [
+      serviceHighlights: [
         {
           icon: Calendar,
-          title: "الجدول",
-          desc: "عرض جميع الدروس.",
+          title: "جدول الدروس",
+          desc: "نظم دروسك القادمة والجلسات التعليمية بسهولة.",
+        },
+        {
+          icon: ClipboardCheck,
+          title: "متابعة التقدم",
+          desc: "تابع الواجبات والحضور والتقدم الأكاديمي.",
         },
         {
           icon: MessageCircle,
-          title: "واتساب",
-          desc: "التواصل مع المعلمين.",
-        },
-        {
-          icon: Folder,
-          title: "المواد",
-          desc: "تحميل الملفات.",
+          title: "ابق على تواصل",
+          desc: "تواصل مع المعلمين واحصل على أهم الإشعارات.",
         },
         {
           icon: Award,
           title: "الشهادات",
-          desc: "الحصول على الشهادات.",
+          desc: "احصل على شهاداتك الرقمية بعد إكمال الدورات.",
         },
       ],
+
+      dashboard: {
+        title: "لوحة الطالب",
+        welcome: "مرحباً بعودتك!",
+        overview: "نظرة عامة على تعلمك",
+
+        classes: "دروس اليوم",
+        classesDesc: "تابع جدولك التعليمي بسهولة.",
+
+        assignments: "الواجبات",
+        assignmentsDesc: "راجع وأدر أعمالك المطلوبة.",
+
+        attendance: "الحضور",
+        attendanceDesc: "تابع حضورك في الدروس.",
+
+        notices: "آخر الإشعارات",
+        noticesDesc: "ابق على اطلاع بأهم الإعلانات.",
+
+        viewAll: "عرض الكل",
+
+        live: "مباشر الآن",
+        upcoming: "قادم",
+        pending: "معلق",
+        completed: "مكتمل",
+
+        class1: "تطوير React",
+        class1Time: "09:00 صباحاً - 10:30 صباحاً",
+
+        class2: "درس القرآن",
+        class2Time: "11:00 صباحاً - 12:00 ظهراً",
+
+        assignment: "واجب تطوير الويب",
+        assignmentDue: "موعد التسليم غداً",
+
+        notice: "تم رفع مواد تعليمية جديدة.",
+      },
+
+      featuresTitle: "كل شيء في مكان واحد",
+
+      featuresDescription:
+        "توفر لوحة الطالب وصولاً سريعاً إلى الجداول والمواد التعليمية والشهادات والتواصل ومتابعة التقدم.",
+
+      features: [
+        {
+          icon: Calendar,
+          title: "جدول الدروس",
+          desc: "عرض الدروس القادمة ومواعيدها والجلسات التعليمية المهمة.",
+        },
+        {
+          icon: MessageCircle,
+          title: "التواصل مع المعلمين",
+          desc: "ابق على اتصال بالمعلمين واحصل على التحديثات المهمة.",
+        },
+        {
+          icon: Folder,
+          title: "المواد التعليمية",
+          desc: "الوصول إلى الملاحظات والمحاضرات والوثائق والمواد التعليمية.",
+        },
+        {
+          icon: Award,
+          title: "الشهادات",
+          desc: "الوصول إلى شهاداتك الرقمية وتحميلها في أي وقت.",
+        },
+      ],
+
+      highlights: [
+        {
+          icon: Calendar,
+          title: "الجدول اليومي",
+          desc: "لا تفوت أي درس مهم.",
+        },
+        {
+          icon: MessageCircle,
+          title: "دعم المجتمع",
+          desc: "ابق على اتصال مع معلميك.",
+        },
+        {
+          icon: Award,
+          title: "شهادات موثقة",
+          desc: "احصل على شهادتك بعد إكمال الدورة.",
+        },
+      ],
+
+      cta: {
+        badge: "منصة تعليمية ذكية",
+
+        title: "تعلم.",
+
+        highlight: "تابع تقدمك.",
+
+        final: "انجح.",
+
+        description:
+          "يمكنك الوصول إلى الدروس والواجبات والشهادات والحضور والإشعارات والمعلمين من لوحة واحدة آمنة في أي وقت ومن أي مكان.",
+
+        dashboard: "لوحة التحكم",
+        dashboardStatus: "جاهزة للاستخدام",
+
+        courses: "المواد التعليمية",
+        coursesStatus: "متاحة",
+
+        certificates: "الشهادات",
+        certificatesStatus: "متاحة",
+
+        communication: "التواصل مع المعلمين",
+        communicationStatus: "متصل",
+      },
     },
   };
 
   const t = content[lang] || content.en;
 
+  const isRTL = lang === "ur" || lang === "ar";
+
   return (
-    <section className="relative overflow-hidden py-24 bg-gradient-to-br from-[#071f27] via-[#0b2d36] to-[#123d47]">
+    <section
+      dir={isRTL ? "rtl" : "ltr"}
+      className="relative overflow-hidden bg-gradient-to-br from-[#061c23] via-[#0b2d36] to-[#123f49] py-20 sm:py-24 lg:py-28"
+    >
+      {/* =====================================================
+          BACKGROUND EFFECTS
+      ====================================================== */}
 
-      {/* Background Blur */}
+      <div className="pointer-events-none absolute -top-40 -left-40 h-[420px] w-[420px] rounded-full bg-cyan-500/20 blur-[130px]" />
 
-      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-cyan-500/20 blur-[130px]" />
+      <div className="pointer-events-none absolute -bottom-40 -right-40 h-[420px] w-[420px] rounded-full bg-yellow-400/10 blur-[130px]" />
 
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-yellow-400/20 blur-[130px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-[150px]" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      {/* =====================================================
+          MAIN CONTAINER
+      ====================================================== */}
 
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-                    {/* ================= LEFT CONTENT ================= */}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-          <div>
+        {/* =====================================================
+            HERO
+        ====================================================== */}
 
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 px-5 py-2 text-cyan-300 font-semibold">
+        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
 
-              <LayoutDashboard size={18} />
+          {/* ================= LEFT CONTENT ================= */}
 
-              {t.badge}
+          <div className="text-center lg:text-left">
 
-            </span>
+            {/* Badge */}
 
-            <h2 className="mt-8 text-4xl md:text-5xl xl:text-6xl font-extrabold text-white leading-tight">
+            <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-white/10 px-4 py-2 text-sm font-semibold text-cyan-200 shadow-lg backdrop-blur-md sm:px-5">
+              <LayoutDashboard size={17} />
+              <span>{t.badge}</span>
+            </div>
 
+            {/* Heading */}
+
+            <h2 className="mt-7 text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-[64px]">
               {t.title}
 
-              <span className="block mt-3 text-yellow-400">
-
+              <span className="mt-3 block bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">
                 {t.highlight}
-
               </span>
-
             </h2>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-300">
+            {/* Description */}
 
+            <p className="mx-auto mt-7 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8 lg:mx-0">
               {t.description}
-
             </p>
-
-            {/* Statistics */}
-
-            <div className="grid grid-cols-2 gap-5 mt-12">
-
-              {t.stats.map((item, index) => (
-
-                <div
-                  key={index}
-                  className="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-6 transition-all duration-500 hover:-translate-y-2 hover:bg-white/15"
-                >
-
-                  <h3 className="text-4xl font-extrabold text-yellow-400">
-
-                    {item.number}
-
-                  </h3>
-
-                  <p className="mt-2 text-slate-300">
-
-                    {item.label}
-
-                  </p>
-
-                </div>
-
-              ))}
-
-            </div>
 
             {/* Buttons */}
 
-            <div className="flex flex-wrap gap-5 mt-12">
+            <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
 
               <Link
                 to="/login"
-                className="inline-flex items-center gap-3 rounded-2xl bg-yellow-400 px-8 py-4 font-bold text-[#0b2d36] transition-all duration-300 hover:scale-105 hover:bg-yellow-300 shadow-xl"
+                className="group inline-flex items-center justify-center gap-3 rounded-2xl bg-yellow-400 px-7 py-4 font-bold text-[#0b2d36] shadow-xl shadow-yellow-400/10 transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-2xl sm:px-8"
               >
-
                 {t.button}
 
-                <ArrowRight size={22} />
-
+                <ArrowRight
+                  size={21}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
               </Link>
 
-              <button
-                className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md px-8 py-4 text-white font-semibold transition-all duration-300 hover:bg-white/20"
+              <a
+                href="#dashboard-features"
+                className="inline-flex items-center justify-center gap-3 rounded-2xl border border-white/15 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 sm:px-8"
               >
-
                 <BookOpen size={20} />
-
-                Learn More
-
-              </button>
+                {t.secondaryButton}
+              </a>
 
             </div>
 
-            {/* Bottom Highlights */}
+            {/* =====================================================
+                SERVICE HIGHLIGHTS
+            ====================================================== */}
 
-            <div className="grid sm:grid-cols-3 gap-5 mt-14">
+            <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
 
-              <div className="flex items-center gap-3">
+              {t.serviceHighlights.map((item, index) => {
+                const Icon = item.icon;
 
-                <div className="w-12 h-12 rounded-2xl bg-cyan-500/20 flex items-center justify-center">
+                return (
+                  <div
+                    key={index}
+                    className="group rounded-2xl border border-white/10 bg-white/[0.07] p-5 text-left backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/10"
+                  >
+                    <div className="flex items-start gap-4">
 
-                  <Users className="text-cyan-300" size={22} />
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300 transition-transform duration-300 group-hover:scale-110">
+                        <Icon size={22} />
+                      </div>
 
-                </div>
+                      <div>
+                        <h3 className="font-bold text-white">
+                          {item.title}
+                        </h3>
 
-                <div>
+                        <p className="mt-1.5 text-sm leading-6 text-slate-400">
+                          {item.desc}
+                        </p>
+                      </div>
 
-                  <h4 className="font-bold text-white">
-
-                    10,000+
-
-                  </h4>
-
-                  <p className="text-sm text-slate-400">
-
-                    Active Students
-
-                  </p>
-
-                </div>
-
-              </div>
-
-              <div className="flex items-center gap-3">
-
-                <div className="w-12 h-12 rounded-2xl bg-yellow-400/20 flex items-center justify-center">
-
-                  <GraduationCap
-                    className="text-yellow-300"
-                    size={22}
-                  />
-
-                </div>
-
-                <div>
-
-                  <h4 className="font-bold text-white">
-
-                    250+
-
-                  </h4>
-
-                  <p className="text-sm text-slate-400">
-
-                    Professional Courses
-
-                  </p>
-
-                </div>
-
-              </div>
-
-              <div className="flex items-center gap-3">
-
-                <div className="w-12 h-12 rounded-2xl bg-green-500/20 flex items-center justify-center">
-
-                  <CheckCircle
-                    className="text-green-300"
-                    size={22}
-                  />
-
-                </div>
-
-                <div>
-
-                  <h4 className="font-bold text-white">
-
-                    98%
-
-                  </h4>
-
-                  <p className="text-sm text-slate-400">
-
-                    Student Satisfaction
-
-                  </p>
-
-                </div>
-
-              </div>
+                    </div>
+                  </div>
+                );
+              })}
 
             </div>
-
           </div>
 
-          {/* ================= RIGHT SIDE START ================= */}
+          {/* =====================================================
+              RIGHT DASHBOARD MOCKUP
+          ====================================================== */}
 
-          <div className="relative flex justify-center">
-                        {/* Dashboard Window */}
+          <div className="relative mx-auto w-full max-w-[520px]">
 
-            <div className="relative w-full max-w-md rounded-[36px] overflow-hidden bg-white shadow-[0_35px_90px_rgba(0,0,0,.35)]">
+            {/* Glow */}
 
-              {/* Header */}
+            <div className="absolute inset-8 rounded-[45px] bg-cyan-400/20 blur-[70px]" />
 
-              <div className="bg-[#0b2d36] px-6 py-5 flex items-center justify-between">
+            {/* Dashboard Window */}
 
-                <div className="flex gap-2">
+            <div className="relative overflow-hidden rounded-[28px] border border-white/20 bg-white shadow-[0_35px_100px_rgba(0,0,0,0.35)] sm:rounded-[36px]">
 
-                  <span className="w-3 h-3 rounded-full bg-red-400"></span>
+              {/* Browser Header */}
 
-                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
+              <div className="flex items-center justify-between bg-[#08242c] px-4 py-4 sm:px-6 sm:py-5">
 
-                  <span className="w-3 h-3 rounded-full bg-green-400"></span>
-
+                <div className="flex gap-1.5 sm:gap-2">
+                  <span className="h-2.5 w-2.5 rounded-full bg-red-400 sm:h-3 sm:w-3" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-yellow-400 sm:h-3 sm:w-3" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-green-400 sm:h-3 sm:w-3" />
                 </div>
 
-                <h3 className="text-white font-semibold">
+                <div className="flex items-center gap-2 text-xs font-semibold text-white sm:text-sm">
+                  <LayoutDashboard size={16} />
+                  {t.dashboard.title}
+                </div>
 
-                  Student Dashboard
-
-                </h3>
+                <div className="h-2 w-2 rounded-full bg-green-400 shadow-[0_0_12px_rgba(74,222,128,0.8)]" />
 
               </div>
 
               {/* Dashboard Body */}
 
-              <div className="p-6">
+              <div className="bg-slate-50 p-4 sm:p-6">
 
-                {/* Top Cards */}
+                {/* Welcome */}
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="mb-5 rounded-2xl bg-gradient-to-r from-cyan-700 to-[#0b2d36] p-5 text-white sm:p-6">
 
-                  <div className="rounded-2xl bg-cyan-50 p-5">
+                  <div className="flex items-center justify-between gap-4">
 
-                    <Users
-                      className="text-cyan-700"
-                      size={28}
-                    />
+                    <div>
+                      <p className="text-xs text-cyan-100 sm:text-sm">
+                        {t.dashboard.welcome}
+                      </p>
 
-                    <h4 className="mt-4 font-bold">
+                      <h3 className="mt-1 text-xl font-extrabold sm:text-2xl">
+                        {t.dashboard.overview}
+                      </h3>
+                    </div>
 
-                      Students
+                    <div className="hidden h-12 w-12 items-center justify-center rounded-2xl bg-white/10 sm:flex">
+                      <GraduationCap size={25} />
+                    </div>
 
+                  </div>
+
+                </div>
+
+                {/* =================================================
+                    DASHBOARD QUICK CARDS
+                ================================================== */}
+
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+
+                  {/* Classes */}
+
+                  <div className="rounded-2xl border border-cyan-100 bg-cyan-50 p-4 sm:p-5">
+
+                    <div className="flex items-center justify-between">
+
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-cyan-700 shadow-sm">
+                        <Calendar size={21} />
+                      </div>
+
+                      <span className="rounded-full bg-cyan-100 px-2 py-1 text-[10px] font-bold text-cyan-700 sm:text-xs">
+                        {t.dashboard.live}
+                      </span>
+
+                    </div>
+
+                    <h4 className="mt-4 text-sm font-bold text-slate-800 sm:text-base">
+                      {t.dashboard.classes}
                     </h4>
 
-                    <p className="mt-2 text-3xl font-bold text-cyan-700">
-
-                      10K+
-
+                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                      {t.dashboard.classesDesc}
                     </p>
 
                   </div>
 
-                  <div className="rounded-2xl bg-yellow-50 p-5">
+                  {/* Assignments */}
 
-                    <BookOpen
-                      className="text-yellow-600"
-                      size={28}
-                    />
+                  <div className="rounded-2xl border border-yellow-100 bg-yellow-50 p-4 sm:p-5">
 
-                    <h4 className="mt-4 font-bold">
+                    <div className="flex items-center justify-between">
 
-                      Courses
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-yellow-600 shadow-sm">
+                        <FileText size={21} />
+                      </div>
 
+                      <span className="rounded-full bg-yellow-100 px-2 py-1 text-[10px] font-bold text-yellow-700 sm:text-xs">
+                        {t.dashboard.pending}
+                      </span>
+
+                    </div>
+
+                    <h4 className="mt-4 text-sm font-bold text-slate-800 sm:text-base">
+                      {t.dashboard.assignments}
                     </h4>
 
-                    <p className="mt-2 text-3xl font-bold text-yellow-600">
-
-                      250+
-
+                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                      {t.dashboard.assignmentsDesc}
                     </p>
 
                   </div>
 
-                  <div className="rounded-2xl bg-green-50 p-5">
+                  {/* Attendance */}
 
-                    <GraduationCap
-                      className="text-green-600"
-                      size={28}
-                    />
+                  <div className="rounded-2xl border border-green-100 bg-green-50 p-4 sm:p-5">
 
-                    <h4 className="mt-4 font-bold">
+                    <div className="flex items-center justify-between">
 
-                      Certificates
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-green-600 shadow-sm">
+                        <CheckCircle size={21} />
+                      </div>
 
+                      <span className="rounded-full bg-green-100 px-2 py-1 text-[10px] font-bold text-green-700 sm:text-xs">
+                        {t.dashboard.completed}
+                      </span>
+
+                    </div>
+
+                    <h4 className="mt-4 text-sm font-bold text-slate-800 sm:text-base">
+                      {t.dashboard.attendance}
                     </h4>
 
-                    <p className="mt-2 text-3xl font-bold text-green-600">
-
-                      1500+
-
+                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                      {t.dashboard.attendanceDesc}
                     </p>
 
                   </div>
 
-                  <div className="rounded-2xl bg-purple-50 p-5">
+                  {/* Notices */}
 
-                    <Award
-                      className="text-purple-600"
-                      size={28}
-                    />
+                  <div className="rounded-2xl border border-purple-100 bg-purple-50 p-4 sm:p-5">
 
-                    <h4 className="mt-4 font-bold">
+                    <div className="flex items-center justify-between">
 
-                      Success
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-purple-600 shadow-sm">
+                        <Bell size={21} />
+                      </div>
 
+                      <span className="rounded-full bg-purple-100 px-2 py-1 text-[10px] font-bold text-purple-700 sm:text-xs">
+                        New
+                      </span>
+
+                    </div>
+
+                    <h4 className="mt-4 text-sm font-bold text-slate-800 sm:text-base">
+                      {t.dashboard.notices}
                     </h4>
 
-                    <p className="mt-2 text-3xl font-bold text-purple-600">
-
-                      98%
-
+                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                      {t.dashboard.noticesDesc}
                     </p>
 
                   </div>
 
                 </div>
 
-                {/* Today's Schedule */}
+                {/* =================================================
+                    TODAY'S SCHEDULE
+                ================================================== */}
 
-                <div className="mt-6 rounded-2xl border border-slate-200 p-5">
+                <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between gap-3">
 
-                    <h3 className="font-bold text-slate-800">
+                    <div>
+                      <h3 className="font-bold text-slate-800">
+                        {t.dashboard.classes}
+                      </h3>
 
-                      Today's Schedule
+                      <p className="mt-1 text-xs text-slate-500">
+                        {t.dashboard.classesDesc}
+                      </p>
+                    </div>
 
-                    </h3>
-
-                    <Calendar
-                      className="text-cyan-700"
-                      size={22}
-                    />
+                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-50 text-cyan-700">
+                      <Clock3 size={19} />
+                    </div>
 
                   </div>
 
-                  <div className="mt-5 space-y-4">
+                  <div className="mt-4 space-y-3">
 
-                    <div className="flex items-center justify-between rounded-xl bg-cyan-50 p-4">
+                    {/* Class 1 */}
 
-                      <div>
+                    <div className="flex items-center gap-3 rounded-xl bg-cyan-50 p-3 sm:p-4">
 
-                        <h4 className="font-semibold">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-cyan-600 text-white">
+                        <PlayCircle size={19} />
+                      </div>
 
-                          React Development
+                      <div className="min-w-0 flex-1">
 
+                        <h4 className="truncate text-sm font-bold text-slate-800">
+                          {t.dashboard.class1}
                         </h4>
 
-                        <p className="text-sm text-slate-500">
-
-                          09:00 AM - 10:30 AM
-
+                        <p className="mt-1 text-xs text-slate-500">
+                          {t.dashboard.class1Time}
                         </p>
 
                       </div>
 
-                      <span className="rounded-full bg-cyan-600 px-3 py-1 text-xs text-white">
-
-                        Live
-
+                      <span className="hidden rounded-full bg-cyan-600 px-3 py-1 text-[10px] font-bold text-white sm:inline-block">
+                        {t.dashboard.live}
                       </span>
 
                     </div>
 
-                    <div className="flex items-center justify-between rounded-xl bg-yellow-50 p-4">
+                    {/* Class 2 */}
 
-                      <div>
+                    <div className="flex items-center gap-3 rounded-xl bg-yellow-50 p-3 sm:p-4">
 
-                        <h4 className="font-semibold">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-yellow-500 text-white">
+                        <BookOpen size={19} />
+                      </div>
 
-                          Quran Class
+                      <div className="min-w-0 flex-1">
 
+                        <h4 className="truncate text-sm font-bold text-slate-800">
+                          {t.dashboard.class2}
                         </h4>
 
-                        <p className="text-sm text-slate-500">
-
-                          11:00 AM - 12:00 PM
-
+                        <p className="mt-1 text-xs text-slate-500">
+                          {t.dashboard.class2Time}
                         </p>
 
                       </div>
 
-                      <span className="rounded-full bg-yellow-500 px-3 py-1 text-xs text-white">
-
-                        Upcoming
-
+                      <span className="hidden rounded-full bg-yellow-500 px-3 py-1 text-[10px] font-bold text-white sm:inline-block">
+                        {t.dashboard.upcoming}
                       </span>
 
                     </div>
 
+                  </div>
+
+                </div>
+
+                {/* Notice */}
+
+                <div className="mt-4 flex items-start gap-3 rounded-2xl border border-purple-100 bg-purple-50 p-4">
+
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-purple-100 text-purple-600">
+                    <Bell size={18} />
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-800">
+                      {t.dashboard.notices}
+                    </h4>
+
+                    <p className="mt-1 text-xs leading-5 text-slate-500">
+                      {t.dashboard.notice}
+                    </p>
                   </div>
 
                 </div>
 
               </div>
-
             </div>
 
-            {/* Floating Card */}
+            {/* =================================================
+                FLOATING CERTIFICATE CARD
+            ================================================== */}
 
-            <div className="hidden xl:flex absolute -left-8 bottom-10 bg-white rounded-3xl shadow-2xl border border-slate-100 px-6 py-5 items-center gap-4">
+            <div className="absolute -bottom-5 left-1/2 hidden -translate-x-1/2 items-center gap-4 rounded-2xl border border-slate-100 bg-white px-5 py-4 shadow-2xl sm:flex lg:-left-12 lg:translate-x-0">
 
-              <div className="w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center">
-
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100">
                 <Award
                   className="text-green-600"
-                  size={28}
+                  size={25}
                 />
-
               </div>
 
               <div>
-
-                <h4 className="font-bold text-slate-900">
-
-                  Certificates Ready
-
+                <h4 className="text-sm font-bold text-slate-900">
+                  {t.dashboard.certificates}
                 </h4>
 
-                <p className="text-sm text-slate-500">
-
-                  Download Anytime
-
+                <p className="text-xs text-slate-500">
+                  {t.dashboard.viewAll}
                 </p>
-
               </div>
 
             </div>
 
           </div>
-
         </div>
-                  {/* ================= FEATURES ================= */}
 
-        <div className="mt-28">
+        {/* =====================================================
+            FEATURES SECTION
+        ====================================================== */}
 
-          <div className="text-center max-w-3xl mx-auto">
+        <div
+          id="dashboard-features"
+          className="mt-24 scroll-mt-20 sm:mt-28"
+        >
 
-            <span className="inline-flex items-center gap-2 rounded-full bg-cyan-100 px-5 py-2 font-semibold text-cyan-700">
+          {/* Section Heading */}
 
-              <LayoutDashboard size={18} />
+          <div className="mx-auto max-w-3xl text-center">
 
+            <span className="inline-flex items-center gap-2 rounded-full bg-cyan-400/10 px-5 py-2 text-sm font-semibold text-cyan-300">
+              <LayoutDashboard size={17} />
               Dashboard Features
-
             </span>
 
-            <h2 className="mt-6 text-4xl lg:text-5xl font-extrabold text-white">
-
-              Everything In One Place
-
+            <h2 className="mt-5 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+              {t.featuresTitle}
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-300">
-
-              Our student dashboard gives learners instant access to everything
-              they need including schedules, learning resources, certificates,
-              communication and progress tracking.
-
+            <p className="mt-5 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+              {t.featuresDescription}
             </p>
 
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          {/* Feature Cards */}
+
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
 
             {t.features.map((feature, index) => {
-
               const Icon = feature.icon;
 
               return (
-
                 <div
                   key={index}
-                  className="group rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-8 transition-all duration-500 hover:-translate-y-3 hover:border-cyan-400/40 hover:bg-white/15"
+                  className="group rounded-3xl border border-white/10 bg-white/[0.07] p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-cyan-300/30 hover:bg-white/10 sm:p-7"
                 >
 
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400/20 to-cyan-300/10 transition duration-500 group-hover:scale-110">
-
-                    <Icon
-                      size={30}
-                      className="text-cyan-300"
-                    />
-
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400/20 to-cyan-300/5 text-cyan-300 transition-all duration-500 group-hover:scale-110 group-hover:bg-cyan-400/20">
+                    <Icon size={27} />
                   </div>
 
-                  <h3 className="mt-7 text-2xl font-bold text-white">
-
+                  <h3 className="mt-6 text-xl font-bold text-white">
                     {feature.title}
-
                   </h3>
 
-                  <p className="mt-4 leading-7 text-slate-300">
-
+                  <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
                     {feature.desc}
-
                   </p>
 
-                  <div className="mt-8 flex items-center gap-2 text-cyan-300 font-semibold">
-
-                    Learn More
+                  <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-cyan-300">
+                    <span>{t.dashboard.viewAll}</span>
 
                     <ArrowRight
-                      size={18}
-                      className="transition-transform group-hover:translate-x-2"
+                      size={17}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
                     />
-
                   </div>
 
                 </div>
-
               );
-
             })}
 
           </div>
 
-          {/* Feature Highlights */}
+          {/* =================================================
+              FEATURE HIGHLIGHTS
+          ================================================== */}
 
-          <div className="mt-20 grid gap-8 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
 
-            <div className="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-8">
+            {t.highlights.map((item, index) => {
+              const Icon = item.icon;
 
-              <div className="flex items-center gap-4">
+              return (
+                <div
+                  key={index}
+                  className="rounded-3xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-xl transition duration-300 hover:bg-white/[0.08] sm:p-7"
+                >
 
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/20">
+                  <div className="flex items-center gap-4">
 
-                  <Calendar
-                    className="text-cyan-300"
-                    size={30}
-                  />
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
+                      <Icon size={27} />
+                    </div>
 
-                </div>
+                    <div>
+                      <h3 className="font-bold text-white">
+                        {item.title}
+                      </h3>
 
-                <div>
+                      <p className="mt-1 text-sm text-slate-400">
+                        {item.desc}
+                      </p>
+                    </div>
 
-                  <h3 className="text-xl font-bold text-white">
-
-                    Daily Schedule
-
-                  </h3>
-
-                  <p className="text-slate-300">
-
-                    Never miss a class.
-
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-8">
-
-              <div className="flex items-center gap-4">
-
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-500/20">
-
-                  <MessageCircle
-                    className="text-green-300"
-                    size={30}
-                  />
+                  </div>
 
                 </div>
-
-                <div>
-
-                  <h3 className="text-xl font-bold text-white">
-
-                    Community Support
-
-                  </h3>
-
-                  <p className="text-slate-300">
-
-                    Connect with mentors instantly.
-
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl p-8">
-
-              <div className="flex items-center gap-4">
-
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-500/20">
-
-                  <Award
-                    className="text-yellow-300"
-                    size={30}
-                  />
-
-                </div>
-
-                <div>
-
-                  <h3 className="text-xl font-bold text-white">
-
-                    Verified Certificates
-
-                  </h3>
-
-                  <p className="text-slate-300">
-
-                    Download anytime after completion.
-
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
+              );
+            })}
 
           </div>
 
         </div>
-                {/* ================= PREMIUM CTA ================= */}
 
-        <div className="mt-28">
+        {/* =====================================================
+            PREMIUM CTA
+        ====================================================== */}
 
-          <div className="relative overflow-hidden rounded-[40px] bg-gradient-to-r from-cyan-700 via-[#0b2d36] to-cyan-900 p-10 lg:p-16 shadow-2xl">
+        <div className="mt-24 sm:mt-28">
+
+          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-cyan-700 via-[#0b2d36] to-cyan-950 p-7 shadow-2xl sm:rounded-[40px] sm:p-10 lg:p-16">
 
             {/* Background */}
 
-            <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-cyan-400/20 blur-[130px]" />
+            <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-cyan-400/20 blur-[110px]" />
 
-            <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-yellow-400/20 blur-[130px]" />
+            <div className="pointer-events-none absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-yellow-400/10 blur-[110px]" />
 
-            <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative z-10 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
 
               {/* Left */}
 
               <div>
 
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-5 py-2 text-cyan-200">
-
-                  <LayoutDashboard size={18} />
-
-                  Smart Learning Platform
-
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-cyan-200 backdrop-blur-md">
+                  <LayoutDashboard size={17} />
+                  {t.cta.badge}
                 </span>
 
-                <h2 className="mt-8 text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+                <h2 className="mt-7 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
 
-                  Learn.
+                  {t.cta.title}
 
                   <span className="block text-yellow-400">
-
-                    Track.
-
+                    {t.cta.highlight}
                   </span>
 
                   <span className="block">
-
-                    Succeed.
-
+                    {t.cta.final}
                   </span>
 
                 </h2>
 
-                <p className="mt-8 text-lg leading-8 text-slate-300 max-w-xl">
-
-                  Access your classes, assignments, certificates,
-                  attendance, notices and teachers from one secure
-                  dashboard anytime and anywhere.
-
+                <p className="mt-6 max-w-xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+                  {t.cta.description}
                 </p>
+
+                <Link
+                  to="/login"
+                  className="group mt-8 inline-flex items-center gap-3 rounded-2xl bg-yellow-400 px-7 py-4 font-bold text-[#0b2d36] shadow-xl transition duration-300 hover:-translate-y-1 hover:bg-yellow-300"
+                >
+                  {t.button}
+
+                  <ArrowRight
+                    size={21}
+                    className="transition-transform group-hover:translate-x-1"
+                  />
+                </Link>
 
               </div>
 
-              {/* Right */}
+              {/* Right Status Panel */}
 
-              <div className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl p-8">
+              <div className="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur-xl sm:p-7">
 
-                <div className="space-y-5">
+                <div className="space-y-3">
 
-                  <div className="flex justify-between rounded-2xl bg-white/10 px-5 py-4">
+                  {/* Dashboard */}
 
-                    <span className="text-white">
+                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 sm:px-5">
 
-                      Dashboard
+                    <div className="flex items-center gap-3">
 
-                    </span>
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
+                        <LayoutDashboard size={20} />
+                      </div>
 
-                    <span className="font-bold text-green-400">
+                      <span className="text-sm font-semibold text-white">
+                        {t.cta.dashboard}
+                      </span>
 
-                      Active
+                    </div>
 
-                    </span>
-
-                  </div>
-
-                  <div className="flex justify-between rounded-2xl bg-white/10 px-5 py-4">
-
-                    <span className="text-white">
-
-                      Courses
-
-                    </span>
-
-                    <span className="font-bold text-yellow-300">
-
-                      250+
-
+                    <span className="text-xs font-bold text-green-400">
+                      {t.cta.dashboardStatus}
                     </span>
 
                   </div>
 
-                  <div className="flex justify-between rounded-2xl bg-white/10 px-5 py-4">
+                  {/* Learning Resources */}
 
-                    <span className="text-white">
+                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 sm:px-5">
 
-                      Certificates
+                    <div className="flex items-center gap-3">
 
-                    </span>
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-400/10 text-yellow-300">
+                        <BookOpen size={20} />
+                      </div>
 
-                    <span className="font-bold text-cyan-300">
+                      <span className="text-sm font-semibold text-white">
+                        {t.cta.courses}
+                      </span>
 
-                      Ready
+                    </div>
 
+                    <span className="text-xs font-bold text-yellow-300">
+                      {t.cta.coursesStatus}
                     </span>
 
                   </div>
 
-                  <div className="flex justify-between rounded-2xl bg-white/10 px-5 py-4">
+                  {/* Certificates */}
 
-                    <span className="text-white">
+                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 sm:px-5">
 
-                      WhatsApp Groups
+                    <div className="flex items-center gap-3">
 
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-400/10 text-green-300">
+                        <Award size={20} />
+                      </div>
+
+                      <span className="text-sm font-semibold text-white">
+                        {t.cta.certificates}
+                      </span>
+
+                    </div>
+
+                    <span className="text-xs font-bold text-green-400">
+                      {t.cta.certificatesStatus}
                     </span>
 
-                    <span className="font-bold text-green-400">
+                  </div>
 
-                      Connected
+                  {/* Communication */}
 
+                  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 sm:px-5">
+
+                    <div className="flex items-center gap-3">
+
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-400/10 text-purple-300">
+                        <MessageCircle size={20} />
+                      </div>
+
+                      <span className="text-sm font-semibold text-white">
+                        {t.cta.communication}
+                      </span>
+
+                    </div>
+
+                    <span className="text-xs font-bold text-purple-300">
+                      {t.cta.communicationStatus}
                     </span>
 
                   </div>
@@ -925,13 +1150,11 @@ export default function DashboardSection({ lang = "en" }) {
 
                 <Link
                   to="/login"
-                  className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-yellow-400 py-4 font-bold text-[#0b2d36] transition-all duration-300 hover:scale-105 hover:bg-yellow-300 shadow-xl"
+                  className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-2xl bg-yellow-400 py-4 font-bold text-[#0b2d36] shadow-xl transition duration-300 hover:bg-yellow-300 hover:shadow-2xl"
                 >
-
                   {t.button}
 
-                  <ArrowRight size={22} />
-
+                  <ArrowRight size={21} />
                 </Link>
 
               </div>
@@ -943,9 +1166,6 @@ export default function DashboardSection({ lang = "en" }) {
         </div>
 
       </div>
-
     </section>
-
   );
-
 }
