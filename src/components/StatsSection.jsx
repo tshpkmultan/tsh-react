@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   CheckCircle,
-  GraduationCap,
   HeartPulse,
   BookOpen,
-  Stethoscope,
   Sparkles,
   Compass,
   Users,
+  ShieldCheck,
+  Clock3,
+  MessageCircle,
+  Lightbulb,
 } from "lucide-react";
 
 export default function CTASection({ lang = "en" }) {
@@ -34,43 +36,55 @@ export default function CTASection({ lang = "en" }) {
         "Build practical skills",
       ],
 
-      categoriesTitle: "Explore What TSH Offers",
+      /* =====================================================
+         WHY TSH SECTION
+      ====================================================== */
 
-      categoriesDescription:
-        "Choose the area that matches your goals. You can explore education, healthcare and practical skills from one place.",
+      whyTitle: "Why Choose TSH?",
 
-      categories: [
+      whyDescription:
+        "TSH is designed to make learning, healthcare and personal development easier, more accessible and more connected.",
+
+      whyFeatures: [
         {
           icon: BookOpen,
-          title: "Taleem",
-          subtitle: "Education",
+          title: "Learn With Purpose",
           description:
-            "Explore educational resources, Islamic learning and structured courses designed to support your learning journey.",
+            "Access meaningful educational resources and opportunities designed to support continuous learning.",
         },
         {
-          icon: HeartPulse,
-          title: "Sehat",
-          subtitle: "Healthcare",
+          icon: ShieldCheck,
+          title: "Trusted Experience",
           description:
-            "Access healthcare services and connect with professional medical support when you need it.",
+            "A platform focused on quality, reliability and a better experience for every user.",
         },
         {
-          icon: Sparkles,
-          title: "Hunar",
-          subtitle: "Skills",
+          icon: Clock3,
+          title: "Simple & Accessible",
           description:
-            "Develop practical and digital skills that can help you grow personally and professionally.",
+            "Find the services and resources you need through a simple and user-friendly experience.",
+        },
+        {
+          icon: MessageCircle,
+          title: "Stay Connected",
+          description:
+            "Stay connected with teachers, professionals and the wider TSH community.",
         },
       ],
 
-      bottomTitle: "Your Journey Starts",
+      closingBadge: "Your Journey Starts Here",
 
-      bottomHighlight: "With One Choice",
+      closingTitle: "One Platform.",
 
-      bottomDescription:
-        "Explore the three TSH categories and choose the path that is right for you.",
+      closingHighlight: "Many Possibilities.",
 
-      button: "View All Categories",
+      closingDescription:
+        "Take the next step toward learning, better wellbeing and personal growth with TSH.",
+
+      closingButton: "Explore TSH",
+
+      footerText:
+        "Discover the right opportunity for your journey.",
     },
 
     ur: {
@@ -91,43 +105,51 @@ export default function CTASection({ lang = "en" }) {
         "عملی اور ڈیجیٹل ہنر بنائیں",
       ],
 
-      categoriesTitle: "TSH کیا فراہم کرتا ہے؟",
+      whyTitle: "TSH کا انتخاب کیوں کریں؟",
 
-      categoriesDescription:
-        "اپنے مقصد کے مطابق شعبہ منتخب کریں۔ تعلیم، صحت اور عملی ہنر ایک ہی جگہ سے دریافت کریں۔",
+      whyDescription:
+        "TSH کو اس طرح بنایا گیا ہے کہ تعلیم، صحت اور ذاتی ترقی کو آسان، قابل رسائی اور ایک دوسرے سے مربوط بنایا جا سکے۔",
 
-      categories: [
+      whyFeatures: [
         {
           icon: BookOpen,
-          title: "تعلیم",
-          subtitle: "Taleem",
+          title: "مقصد کے ساتھ سیکھیں",
           description:
-            "تعلیمی مواد، اسلامی تعلیم اور منظم کورسز کے ذریعے اپنے تعلیمی سفر کو آگے بڑھائیں۔",
+            "بامقصد تعلیمی مواد اور مواقع تک رسائی حاصل کریں جو مسلسل سیکھنے میں مدد دیتے ہیں۔",
         },
         {
-          icon: HeartPulse,
-          title: "صحت",
-          subtitle: "Sehat",
+          icon: ShieldCheck,
+          title: "قابل اعتماد تجربہ",
           description:
-            "صحت کی سہولیات حاصل کریں اور ضرورت کے وقت طبی ماہرین سے رابطہ کریں۔",
+            "ایک ایسا پلیٹ فارم جو معیار، اعتماد اور صارف کے بہتر تجربے پر توجہ دیتا ہے۔",
         },
         {
-          icon: Sparkles,
-          title: "ہنر",
-          subtitle: "Hunar",
+          icon: Clock3,
+          title: "آسان اور قابل رسائی",
           description:
-            "اپنی ذاتی اور پیشہ ورانہ ترقی کے لیے عملی اور ڈیجیٹل مہارتیں حاصل کریں۔",
+            "آسان اور صارف دوست طریقے سے اپنی ضرورت کی سہولیات اور مواد تلاش کریں۔",
+        },
+        {
+          icon: MessageCircle,
+          title: "رابطے میں رہیں",
+          description:
+            "اساتذہ، ماہرین اور TSH کمیونٹی کے ساتھ رابطے میں رہیں۔",
         },
       ],
 
-      bottomTitle: "آپ کا سفر شروع ہوتا ہے",
+      closingBadge: "آپ کا سفر یہاں سے شروع ہوتا ہے",
 
-      bottomHighlight: "ایک انتخاب سے",
+      closingTitle: "ایک پلیٹ فارم۔",
 
-      bottomDescription:
-        "TSH کی تینوں کیٹیگریز دیکھیں اور اپنے لیے درست راستہ منتخب کریں۔",
+      closingHighlight: "بے شمار مواقع۔",
 
-      button: "تمام کیٹیگریز دیکھیں",
+      closingDescription:
+        "TSH کے ساتھ تعلیم، بہتر صحت اور ذاتی ترقی کی طرف اپنا اگلا قدم اٹھائیں۔",
+
+      closingButton: "TSH دریافت کریں",
+
+      footerText:
+        "اپنے سفر کے لیے درست موقع دریافت کریں۔",
     },
 
     ar: {
@@ -148,43 +170,51 @@ export default function CTASection({ lang = "en" }) {
         "تطوير مهارات عملية",
       ],
 
-      categoriesTitle: "اكتشف ما تقدمه TSH",
+      whyTitle: "لماذا تختار TSH؟",
 
-      categoriesDescription:
-        "اختر المجال الذي يناسب أهدافك. يمكنك استكشاف التعليم والرعاية الصحية والمهارات العملية من مكان واحد.",
+      whyDescription:
+        "تم تصميم TSH لجعل التعليم والرعاية الصحية والتطور الشخصي أسهل وأكثر سهولة وترابطاً.",
 
-      categories: [
+      whyFeatures: [
         {
           icon: BookOpen,
-          title: "تعليم",
-          subtitle: "Taleem",
+          title: "تعلم بهدف",
           description:
-            "استكشف الموارد التعليمية والتعليم الإسلامي والدورات المنظمة لدعم رحلتك التعليمية.",
+            "الوصول إلى موارد وفرص تعليمية هادفة تساعدك على التعلم والتطور المستمر.",
         },
         {
-          icon: HeartPulse,
-          title: "صحة",
-          subtitle: "Sehat",
+          icon: ShieldCheck,
+          title: "تجربة موثوقة",
           description:
-            "احصل على خدمات الرعاية الصحية وتواصل مع المتخصصين الطبيين عند الحاجة.",
+            "منصة تركز على الجودة والموثوقية وتقديم تجربة أفضل لكل مستخدم.",
         },
         {
-          icon: Sparkles,
-          title: "مهارات",
-          subtitle: "Hunar",
+          icon: Clock3,
+          title: "بسيط وسهل الوصول",
           description:
-            "طور مهارات عملية ورقمية تساعدك على النمو الشخصي والمهني.",
+            "اعثر على الخدمات والموارد التي تحتاجها من خلال تجربة بسيطة وسهلة الاستخدام.",
+        },
+        {
+          icon: MessageCircle,
+          title: "ابق على تواصل",
+          description:
+            "ابق على اتصال بالمعلمين والمتخصصين ومجتمع TSH.",
         },
       ],
 
-      bottomTitle: "رحلتك تبدأ",
+      closingBadge: "رحلتك تبدأ من هنا",
 
-      bottomHighlight: "باختيار واحد",
+      closingTitle: "منصة واحدة.",
 
-      bottomDescription:
-        "استكشف أقسام TSH الثلاثة واختر المسار المناسب لك.",
+      closingHighlight: "فرص لا محدودة.",
 
-      button: "عرض جميع الأقسام",
+      closingDescription:
+        "خذ خطوتك التالية نحو التعلم والصحة الأفضل والتطور الشخصي مع TSH.",
+
+      closingButton: "اكتشف TSH",
+
+      footerText:
+        "اكتشف الفرصة المناسبة لرحلتك.",
     },
   };
 
@@ -192,7 +222,7 @@ export default function CTASection({ lang = "en" }) {
 
   const isRTL = lang === "ur" || lang === "ar";
 
-  // All category/discovery actions go here first.
+  // All category/discovery actions go to the category page first.
   const categoryPath = "/category";
 
   return (
@@ -265,7 +295,6 @@ export default function CTASection({ lang = "en" }) {
               <div className="mt-8 space-y-4">
 
                 {t.features.map((feature, index) => (
-
                   <div
                     key={index}
                     className="flex items-center gap-3 text-sm text-white sm:text-base"
@@ -283,7 +312,6 @@ export default function CTASection({ lang = "en" }) {
                     <span>{feature}</span>
 
                   </div>
-
                 ))}
 
               </div>
@@ -309,122 +337,100 @@ export default function CTASection({ lang = "en" }) {
             </div>
 
             {/* =================================================
-                RIGHT CATEGORY PREVIEW
+                RIGHT - JOURNEY PREVIEW
             ================================================== */}
 
-            <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl sm:p-7">
+            <div className="relative">
 
-              {/* Header */}
+              {/* Glow */}
 
-              <div className="mb-6 flex items-center gap-4">
+              <div className="absolute inset-5 rounded-[40px] bg-cyan-400/10 blur-[70px]" />
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
+              <div className="relative rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-xl sm:p-7">
 
-                  <Users size={24} />
+                {/* Header */}
+
+                <div className="mb-6 flex items-center gap-4">
+
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
+
+                    <Users size={24} />
+
+                  </div>
+
+                  <div>
+
+                    <h3 className="text-lg font-bold text-white sm:text-xl">
+                      {t.whyTitle}
+                    </h3>
+
+                    <p className="mt-1 text-xs leading-5 text-slate-400 sm:text-sm">
+                      {t.whyDescription}
+                    </p>
+
+                  </div>
 
                 </div>
 
-                <div>
+                {/* =================================================
+                    JOURNEY FEATURES
+                ================================================== */}
 
-                  <h3 className="text-lg font-bold text-white sm:text-xl">
-                    {t.categoriesTitle}
-                  </h3>
+                <div className="space-y-4">
 
-                  <p className="mt-1 text-xs leading-5 text-slate-400 sm:text-sm">
-                    {t.categoriesDescription}
-                  </p>
+                  {t.whyFeatures.map((item, index) => {
 
-                </div>
+                    const Icon = item.icon;
 
-              </div>
+                    return (
+                      <div
+                        key={index}
+                        className="group rounded-2xl border border-white/10 bg-white/[0.07] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.12] sm:p-5"
+                      >
 
-              {/* =================================================
-                  CATEGORY OPTIONS
-              ================================================== */}
+                        <div className="flex items-start gap-4">
 
-              <div className="space-y-4">
+                          {/* Icon */}
 
-                {t.categories.map((category, index) => {
+                          <div
+                            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${
+                              index === 0
+                                ? "bg-cyan-400/10 text-cyan-300"
+                                : index === 1
+                                ? "bg-green-400/10 text-green-300"
+                                : index === 2
+                                ? "bg-yellow-400/10 text-yellow-300"
+                                : "bg-purple-400/10 text-purple-300"
+                            } transition-transform duration-300 group-hover:scale-110`}
+                          >
 
-                  const Icon = category.icon;
-
-                  return (
-                    <Link
-                      key={index}
-                      to={categoryPath}
-                      className="group block rounded-2xl border border-white/10 bg-white/[0.07] p-4 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.13] sm:p-5"
-                    >
-
-                      <div className="flex items-center gap-4">
-
-                        {/* Icon */}
-
-                        <div
-                          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${
-                            index === 0
-                              ? "bg-cyan-400/10 text-cyan-300"
-                              : index === 1
-                              ? "bg-green-400/10 text-green-300"
-                              : "bg-yellow-400/10 text-yellow-300"
-                          }`}
-                        >
-
-                          <Icon size={23} />
-
-                        </div>
-
-                        {/* Content */}
-
-                        <div className="min-w-0 flex-1">
-
-                          <div className="flex flex-wrap items-center gap-2">
-
-                            <h4 className="font-bold text-white">
-                              {category.title}
-                            </h4>
-
-                            <span className="rounded-full bg-white/10 px-2 py-1 text-[10px] font-semibold text-slate-300">
-                              {category.subtitle}
-                            </span>
+                            <Icon size={21} />
 
                           </div>
 
-                          <p className="mt-1.5 text-xs leading-5 text-slate-400 sm:text-sm">
-                            {category.description}
-                          </p>
+                          {/* Content */}
+
+                          <div>
+
+                            <h4 className="font-bold text-white">
+                              {item.title}
+                            </h4>
+
+                            <p className="mt-1.5 text-xs leading-5 text-slate-400 sm:text-sm">
+                              {item.description}
+                            </p>
+
+                          </div>
 
                         </div>
 
-                        {/* Arrow */}
-
-                        <ArrowRight
-                          size={19}
-                          className="shrink-0 text-slate-400 transition-all duration-300 group-hover:translate-x-1 group-hover:text-yellow-300"
-                        />
-
                       </div>
+                    );
+                  })}
 
-                    </Link>
-                  );
-                })}
+                </div>
 
               </div>
-
-              {/* Bottom Button */}
-
-              <Link
-                to={categoryPath}
-                className="group mt-6 flex w-full items-center justify-center gap-3 rounded-2xl bg-yellow-400 py-4 font-bold text-[#0b2d36] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-xl"
-              >
-
-                {t.explore}
-
-                <ArrowRight
-                  size={20}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-
-              </Link>
 
             </div>
 
@@ -433,7 +439,8 @@ export default function CTASection({ lang = "en" }) {
         </div>
 
         {/* =====================================================
-            CATEGORY SECTION
+            WHY TSH SECTION
+            REPLACES THE OLD CATEGORY SECTION
         ====================================================== */}
 
         <div className="mt-20 sm:mt-24">
@@ -444,46 +451,47 @@ export default function CTASection({ lang = "en" }) {
 
             <span className="inline-flex items-center gap-2 rounded-full bg-cyan-400/10 px-5 py-2 text-sm font-semibold text-cyan-300">
 
-              <Sparkles size={17} />
+              <Lightbulb size={17} />
 
-              TSH Categories
+              TSH Experience
 
             </span>
 
             <h2 className="mt-5 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
-              {t.categoriesTitle}
+              {t.whyTitle}
             </h2>
 
             <p className="mt-5 text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              {t.categoriesDescription}
+              {t.whyDescription}
             </p>
 
           </div>
 
-          {/* Category Cards */}
+          {/* Why TSH Cards */}
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3 lg:gap-6">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
 
-            {t.categories.map((category, index) => {
+            {t.whyFeatures.map((item, index) => {
 
-              const Icon = category.icon;
+              const Icon = item.icon;
 
               return (
-                <Link
+                <div
                   key={index}
-                  to={categoryPath}
-                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.07] p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-cyan-300/20 hover:bg-white/[0.11] sm:p-7"
+                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-cyan-300/20 hover:bg-white/[0.10] sm:p-7"
                 >
 
                   {/* Glow */}
 
                   <div
-                    className={`pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full blur-[70px] ${
+                    className={`pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full blur-[60px] ${
                       index === 0
                         ? "bg-cyan-400/20"
                         : index === 1
                         ? "bg-green-400/20"
-                        : "bg-yellow-400/20"
+                        : index === 2
+                        ? "bg-yellow-400/20"
+                        : "bg-purple-400/20"
                     }`}
                   />
 
@@ -497,8 +505,10 @@ export default function CTASection({ lang = "en" }) {
                           ? "bg-cyan-400/10 text-cyan-300"
                           : index === 1
                           ? "bg-green-400/10 text-green-300"
-                          : "bg-yellow-400/10 text-yellow-300"
-                      } transition-transform duration-500 group-hover:scale-110`}
+                          : index === 2
+                          ? "bg-yellow-400/10 text-yellow-300"
+                          : "bg-purple-400/10 text-purple-300"
+                      } transition-all duration-500 group-hover:scale-110`}
                     >
 
                       <Icon size={27} />
@@ -507,40 +517,29 @@ export default function CTASection({ lang = "en" }) {
 
                     {/* Title */}
 
-                    <div className="mt-6 flex items-center gap-3">
-
-                      <h3 className="text-2xl font-extrabold text-white">
-                        {category.title}
-                      </h3>
-
-                      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[10px] font-semibold text-slate-300">
-                        {category.subtitle}
-                      </span>
-
-                    </div>
+                    <h3 className="mt-6 text-xl font-bold text-white">
+                      {item.title}
+                    </h3>
 
                     {/* Description */}
 
-                    <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
-                      {category.description}
+                    <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
+                      {item.description}
                     </p>
 
-                    {/* Explore */}
+                    {/* Small indicator */}
 
-                    <div className="mt-7 flex items-center gap-2 text-sm font-bold text-cyan-300">
+                    <div className="mt-6 flex items-center gap-2 text-xs font-semibold text-cyan-300">
 
-                      {t.explore}
+                      <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
 
-                      <ArrowRight
-                        size={18}
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                      />
+                      TSH Experience
 
                     </div>
 
                   </div>
 
-                </Link>
+                </div>
               );
             })}
 
@@ -549,40 +548,79 @@ export default function CTASection({ lang = "en" }) {
         </div>
 
         {/* =====================================================
-            FINAL SIMPLE CTA
+            FINAL CLOSING CTA
         ====================================================== */}
 
-        <div className="mt-20 text-center sm:mt-24">
+        <div className="mt-20 sm:mt-24">
 
-          <div className="mx-auto max-w-3xl">
+          <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-r from-cyan-700 via-[#0b2d36] to-cyan-900 px-6 py-12 text-center shadow-[0_35px_90px_rgba(0,0,0,.25)] sm:rounded-[40px] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
 
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+            {/* Background Glows */}
 
-              {t.bottomTitle}
+            <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-cyan-400/20 blur-[100px]" />
 
-              <span className="mt-2 block text-yellow-400">
-                {t.bottomHighlight}
+            <div className="pointer-events-none absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-yellow-400/15 blur-[100px]" />
+
+            <div className="relative z-10 mx-auto max-w-3xl">
+
+              {/* Badge */}
+
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-5 py-2.5 text-sm font-semibold text-cyan-200 backdrop-blur-md">
+
+                <Sparkles size={17} />
+
+                {t.closingBadge}
+
               </span>
 
-            </h2>
+              {/* Heading */}
 
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-              {t.bottomDescription}
-            </p>
+              <h2 className="mt-7 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
 
-            <Link
-              to={categoryPath}
-              className="group mt-8 inline-flex items-center justify-center gap-3 rounded-2xl bg-yellow-400 px-7 py-4 font-bold text-[#0b2d36] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-2xl sm:px-9"
-            >
+                {t.closingTitle}
 
-              {t.button}
+                <span className="mt-2 block bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">
+                  {t.closingHighlight}
+                </span>
 
-              <ArrowRight
-                size={20}
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
+              </h2>
 
-            </Link>
+              {/* Description */}
+
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+                {t.closingDescription}
+              </p>
+
+              {/* Button */}
+
+              <Link
+                to={categoryPath}
+                className="group mt-9 inline-flex items-center justify-center gap-3 rounded-2xl bg-yellow-400 px-8 py-4 font-bold text-[#0b2d36] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-2xl sm:px-10"
+              >
+
+                {t.closingButton}
+
+                <ArrowRight
+                  size={21}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+
+              </Link>
+
+              {/* Small Footer Text */}
+
+              <div className="mt-7 flex items-center justify-center gap-2 text-sm text-slate-400">
+
+                <CheckCircle
+                  size={16}
+                  className="text-green-400"
+                />
+
+                {t.footerText}
+
+              </div>
+
+            </div>
 
           </div>
 
