@@ -876,9 +876,7 @@ export default function DashboardSection({ lang = "en" }) {
                   {t.dashboard.certificates}
                 </h4>
 
-                <p className="text-xs text-slate-500">
-                  {t.dashboard.viewAll}
-                </p>
+              
               </div>
 
             </div>
