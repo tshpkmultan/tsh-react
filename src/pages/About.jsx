@@ -772,173 +772,197 @@ export default function About({ lang = "en" }) {
 
       </section>
 
-      {/* =======================================
-                STATISTICS
-      ======================================== */}
+     {/* =======================================
+    TSH EXPERIENCE
+======================================== */}
 
-      <section className="py-24 bg-gradient-to-r from-[#08434B] to-[#0E7490] text-white">
+<section className="relative overflow-hidden bg-gradient-to-r from-[#08434B] to-[#0E7490] py-20 text-white sm:py-24">
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+  {/* Background Effects */}
 
-          <div className="text-center">
+  <div className="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full bg-cyan-300/10 blur-[120px]" />
 
-            <span className="inline-flex bg-white/10 px-4 py-2 rounded-full">
+  <div className="pointer-events-none absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-yellow-400/10 blur-[120px]" />
 
-              Our Achievements
+  <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-            </span>
+    {/* =====================================
+        HEADER
+    ====================================== */}
 
-            <h2 className="mt-6 text-4xl lg:text-5xl font-black">
+    <div className="mx-auto max-w-3xl text-center">
 
-              Growing Every Day
+      <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-5 py-2 text-sm font-semibold text-cyan-100 backdrop-blur-md">
 
-            </h2>
+        <Sparkles size={17} />
 
-            <p className="mt-6 text-slate-200 text-lg max-w-3xl mx-auto">
+        The TSH Experience
 
-              Our numbers reflect the trust and
-              confidence of students, teachers,
-              doctors and communities worldwide.
+      </span>
 
-            </p>
+      <h2 className="mt-6 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
 
-          </div>
+        More Than Just a Platform
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+      </h2>
 
-            <div className="text-center">
+      <p className="mt-5 text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
 
-              <h3 className="text-5xl font-black text-yellow-400">
+        TSH brings learning, healthcare and personal development
+        together in a simple and meaningful digital experience.
 
-                5,000+
+      </p>
 
-              </h3>
+    </div>
 
-              <p className="mt-3 text-slate-200">
 
-                Students
+    {/* =====================================
+        VALUE CARDS
+    ====================================== */}
 
-              </p>
+    <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
-            </div>
+      {/* =================================
+          CARD 1
+      ================================== */}
 
-            <div className="text-center">
+      <div className="group rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.15] hover:shadow-2xl sm:p-7">
 
-              <h3 className="text-5xl font-black text-yellow-400">
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-200 transition-transform duration-500 group-hover:scale-110">
 
-                120+
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Teachers
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                75+
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Doctors
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                40+
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Professional Courses
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                15+
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Countries
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                98%
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Success Rate
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                24/7
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Support
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                100%
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Trusted Platform
-
-              </p>
-
-            </div>
-
-          </div>
+          <BookOpen size={27} />
 
         </div>
 
-      </section>
+        <h3 className="mt-6 text-xl font-bold">
+
+          Meaningful Learning
+
+        </h3>
+
+        <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
+
+          Explore structured educational resources
+          designed to make learning easier and more engaging.
+
+        </p>
+
+      </div>
+
+
+      {/* =================================
+          CARD 2
+      ================================== */}
+
+      <div className="group rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.15] hover:shadow-2xl sm:p-7">
+
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400/10 text-green-200 transition-transform duration-500 group-hover:scale-110">
+
+          <HeartPulse size={27} />
+
+        </div>
+
+        <h3 className="mt-6 text-xl font-bold">
+
+          Accessible Healthcare
+
+        </h3>
+
+        <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
+
+          Connect with healthcare services and
+          professional support when you need it.
+
+        </p>
+
+      </div>
+
+
+      {/* =================================
+          CARD 3
+      ================================== */}
+
+      <div className="group rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.15] hover:shadow-2xl sm:p-7">
+
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-400/10 text-yellow-200 transition-transform duration-500 group-hover:scale-110">
+
+          <Sparkles size={27} />
+
+        </div>
+
+        <h3 className="mt-6 text-xl font-bold">
+
+          Practical Skills
+
+        </h3>
+
+        <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
+
+          Build useful digital and professional skills
+          that can support your personal growth.
+
+        </p>
+
+      </div>
+
+
+      {/* =================================
+          CARD 4
+      ================================== */}
+
+      <div className="group rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.15] hover:shadow-2xl sm:p-7">
+
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-400/10 text-purple-200 transition-transform duration-500 group-hover:scale-110">
+
+          <Users size={27} />
+
+        </div>
+
+        <h3 className="mt-6 text-xl font-bold">
+
+          Connected Community
+
+        </h3>
+
+        <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
+
+          Learn, connect and grow with teachers,
+          professionals and a supportive community.
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    {/* =====================================
+        BOTTOM MESSAGE
+    ====================================== */}
+
+    <div className="mx-auto mt-14 max-w-4xl rounded-3xl border border-white/10 bg-black/10 p-6 text-center backdrop-blur-md sm:mt-16 sm:p-8">
+
+      <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+
+        <CheckCircle
+          size={22}
+          className="shrink-0 text-green-300"
+        />
+
+        <p className="text-sm font-medium leading-6 text-slate-200 sm:text-base">
+
+          A simple platform designed around
+          learning, wellbeing and personal growth.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
             {/* =======================================
                 WHY CHOOSE EDUHEALTH
       ======================================== */}
