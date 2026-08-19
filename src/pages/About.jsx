@@ -1091,174 +1091,343 @@ export default function About({ lang = "en" }) {
         </div>
 
       </section>
+{/* =======================================
+          TSH EXPERIENCE
+======================================== */}
 
-      {/* =======================================
-                STATISTICS
-      ======================================== */}
+<section className="relative overflow-hidden bg-gradient-to-r from-[#08434B] to-[#0E7490] py-20 text-white sm:py-24 lg:py-28">
 
-      <section className="py-24 bg-gradient-to-r from-[#08434B] to-[#0E7490] text-white">
+  {/* =====================================
+        BACKGROUND EFFECTS
+  ====================================== */}
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+  <div className="pointer-events-none absolute -left-32 -top-32 h-80 w-80 rounded-full bg-cyan-300/10 blur-[120px]" />
 
-          <div className="text-center">
+  <div className="pointer-events-none absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-yellow-400/10 blur-[120px]" />
 
-            <span className="inline-flex bg-white/10 px-4 py-2 rounded-full">
+  <div className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-[130px]" />
 
-              Our Achievements
 
-            </span>
+  <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-            <h2 className="mt-6 text-4xl lg:text-5xl font-black">
+    {/* =====================================
+          HEADER
+    ====================================== */}
 
-              Growing Every Day
+    <div className="mx-auto max-w-3xl text-center">
 
-            </h2>
+      <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-5 py-2 text-sm font-semibold text-cyan-100 backdrop-blur-md">
 
-            <p className="mt-6 text-slate-200 text-lg max-w-3xl mx-auto">
+        <Sparkles size={17} />
 
-              Our numbers reflect the trust and
-              confidence of students, teachers,
-              doctors and communities worldwide.
+        The TSH Experience
 
-            </p>
+      </span>
+
+
+      <h2 className="mt-6 text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
+
+        More Than Just a Platform
+
+      </h2>
+
+
+      <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
+
+        TSH brings learning, healthcare and personal development
+        together in one simple, accessible and meaningful experience.
+
+      </p>
+
+    </div>
+
+
+    {/* =====================================
+          EXPERIENCE CARDS
+    ====================================== */}
+
+    <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+
+
+      {/* =================================
+            CARD 1
+      ================================== */}
+
+      <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-cyan-300/30 hover:bg-white/[0.15] hover:shadow-2xl sm:p-7">
+
+        {/* Glow */}
+
+        <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-cyan-400/20 blur-[70px] transition-all duration-500 group-hover:bg-cyan-300/30" />
+
+
+        <div className="relative z-10">
+
+          {/* Icon */}
+
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-200 transition-all duration-500 group-hover:scale-110 group-hover:bg-cyan-400/20">
+
+            <BookOpen size={27} />
 
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
 
-            <div className="text-center">
+          {/* Title */}
 
-              <h3 className="text-5xl font-black text-yellow-400">
+          <h3 className="mt-6 text-xl font-bold">
 
-                5,000+
+            Meaningful Learning
 
-              </h3>
+          </h3>
 
-              <p className="mt-3 text-slate-200">
 
-                Students
+          {/* Description */}
 
-              </p>
+          <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
 
-            </div>
+            Explore structured educational resources
+            designed to make learning easier, practical
+            and more engaging.
 
-            <div className="text-center">
+          </p>
 
-              <h3 className="text-5xl font-black text-yellow-400">
 
-                120+
+          {/* Bottom */}
 
-              </h3>
+          <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-cyan-200">
 
-              <p className="mt-3 text-slate-200">
+            <CheckCircle size={16} />
 
-                Teachers
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                75+
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Doctors
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                40+
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Professional Courses
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                15+
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Countries
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                98%
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Success Rate
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                24/7
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Support
-
-              </p>
-
-            </div>
-
-            <div className="text-center">
-
-              <h3 className="text-5xl font-black text-yellow-400">
-
-                100%
-
-              </h3>
-
-              <p className="mt-3 text-slate-200">
-
-                Trusted Platform
-
-              </p>
-
-            </div>
+            Learn With Purpose
 
           </div>
 
         </div>
 
-      </section>
+      </div>
+
+
+
+      {/* =================================
+            CARD 2
+      ================================== */}
+
+      <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-green-300/30 hover:bg-white/[0.15] hover:shadow-2xl sm:p-7">
+
+        {/* Glow */}
+
+        <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-green-400/20 blur-[70px] transition-all duration-500 group-hover:bg-green-300/30" />
+
+
+        <div className="relative z-10">
+
+          {/* Icon */}
+
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-green-400/10 text-green-200 transition-all duration-500 group-hover:scale-110 group-hover:bg-green-400/20">
+
+            <HeartPulse size={27} />
+
+          </div>
+
+
+          {/* Title */}
+
+          <h3 className="mt-6 text-xl font-bold">
+
+            Accessible Healthcare
+
+          </h3>
+
+
+          {/* Description */}
+
+          <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
+
+            Connect with healthcare services and
+            professional support when you need
+            guidance and care.
+
+          </p>
+
+
+          {/* Bottom */}
+
+          <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-green-200">
+
+            <CheckCircle size={16} />
+
+            Care With Confidence
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      {/* =================================
+            CARD 3
+      ================================== */}
+
+      <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-yellow-300/30 hover:bg-white/[0.15] hover:shadow-2xl sm:p-7">
+
+        {/* Glow */}
+
+        <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-yellow-400/20 blur-[70px] transition-all duration-500 group-hover:bg-yellow-300/30" />
+
+
+        <div className="relative z-10">
+
+          {/* Icon */}
+
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-400/10 text-yellow-200 transition-all duration-500 group-hover:scale-110 group-hover:bg-yellow-400/20">
+
+            <Sparkles size={27} />
+
+          </div>
+
+
+          {/* Title */}
+
+          <h3 className="mt-6 text-xl font-bold">
+
+            Practical Skills
+
+          </h3>
+
+
+          {/* Description */}
+
+          <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
+
+            Build useful digital and professional skills
+            that can support your personal and
+            professional growth.
+
+          </p>
+
+
+          {/* Bottom */}
+
+          <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-yellow-200">
+
+            <CheckCircle size={16} />
+
+            Build Your Future
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      {/* =================================
+            CARD 4
+      ================================== */}
+
+      <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-purple-300/30 hover:bg-white/[0.15] hover:shadow-2xl sm:p-7">
+
+        {/* Glow */}
+
+        <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-purple-400/20 blur-[70px] transition-all duration-500 group-hover:bg-purple-300/30" />
+
+
+        <div className="relative z-10">
+
+          {/* Icon */}
+
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-400/10 text-purple-200 transition-all duration-500 group-hover:scale-110 group-hover:bg-purple-400/20">
+
+            <Users size={27} />
+
+          </div>
+
+
+          {/* Title */}
+
+          <h3 className="mt-6 text-xl font-bold">
+
+            Connected Community
+
+          </h3>
+
+
+          {/* Description */}
+
+          <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
+
+            Stay connected with teachers, professionals
+            and a supportive community focused on
+            learning and growth.
+
+          </p>
+
+
+          {/* Bottom */}
+
+          <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-purple-200">
+
+            <CheckCircle size={16} />
+
+            Grow Together
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    {/* =====================================
+          BOTTOM TRUST MESSAGE
+    ====================================== */}
+
+    <div className="mx-auto mt-14 max-w-4xl sm:mt-16">
+
+      <div className="rounded-3xl border border-white/10 bg-black/10 px-6 py-6 text-center backdrop-blur-md sm:px-10 sm:py-8">
+
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-green-400/10">
+
+            <CheckCircle
+              size={23}
+              className="text-green-300"
+            />
+
+          </div>
+
+
+          <div className="text-center sm:text-left">
+
+            <h3 className="font-bold text-white">
+
+              Designed Around You
+
+            </h3>
+
+            <p className="mt-1 text-sm leading-6 text-slate-300 sm:text-base">
+
+              A simple digital experience built around
+              learning, wellbeing and personal growth.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
             {/* =======================================
                 OUR EXPERTS
       ======================================== */}
