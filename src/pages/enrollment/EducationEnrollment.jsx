@@ -195,12 +195,40 @@ const handleChange = (e) => {
   | Load Courses & Trainers
   |--------------------------------------------------------------------------
   */
+useEffect(() => {
+  const userId = localStorage.getItem("user_id");
+  const storedUser = localStorage.getItem("user");
 
-  useEffect(() => {
+  let isLoggedIn = false;
 
-    fetchData();
+  // Check user_id
+  if (userId) {
+    isLoggedIn = true;
+  }
 
-  }, []);
+  // Also check stored user object
+  if (storedUser) {
+    try {
+      const userObject = JSON.parse(storedUser);
+
+      if (userObject?.id || userObject?.user_id) {
+        isLoggedIn = true;
+      }
+    } catch (error) {
+      console.log("Invalid user data");
+    }
+  }
+
+  // Not logged in → category page
+  if (!isLoggedIn) {
+    navigate("/category", { replace: true });
+    return;
+  }
+
+  // Logged in → load enrollment data
+  fetchData();
+
+}, [navigate]);
 
   const fetchData = async () => {
 
