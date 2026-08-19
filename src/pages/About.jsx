@@ -1,5 +1,4 @@
 // src/pages/About.jsx
-
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -10,8 +9,10 @@ import {
   BookOpen,
   Stethoscope,
   CheckCircle,
+  Sparkles,
+  Users,
+  HeartPulse,
 } from "lucide-react";
-
 export default function About({ lang = "en" }) {
   const content = {
     en: {
