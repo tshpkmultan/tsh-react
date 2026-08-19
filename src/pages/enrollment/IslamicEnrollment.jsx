@@ -202,9 +202,40 @@ const fetchBatches = async () => {
 
 };
 useEffect(() => {
+  const userId = localStorage.getItem("user_id");
+  const storedUser = localStorage.getItem("user");
+
+  let isLoggedIn = false;
+
+  // Check user_id
+  if (userId) {
+    isLoggedIn = true;
+  }
+
+  // Check user object as well
+  if (storedUser) {
+    try {
+      const userObject = JSON.parse(storedUser);
+
+      if (userObject?.id || userObject?.user_id) {
+        isLoggedIn = true;
+      }
+    } catch (error) {
+      console.log("Invalid user data in localStorage");
+    }
+  }
+
+  // Not logged in → go to category page
+  if (!isLoggedIn) {
+    navigate("/category", { replace: true });
+    return;
+  }
+
+  // Logged in → load data
   fetchCourseAndTeachers();
   fetchBatches();
-}, []);
+
+}, [navigate]);
 /* =========================================
    Initial Load
 ========================================= */
