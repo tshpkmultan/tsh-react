@@ -103,7 +103,6 @@ const res = await axios.get(
                   />
 
                 </div>
-
               </div>
 
               <h1 className="text-center text-white text-5xl font-bold mt-8">
@@ -411,12 +410,11 @@ const res = await axios.get(
                       📞 +92 309 7667058
 
                     </p>
-
-                    <p>
-
-                      ✉ support@tsh.com
-
-                    </p>
+<a
+  href="mailto:tshpk.com@gmail.com"
+>
+  ✉ tshpk.com@gmail.com
+</a>
 
                   </div>
 
